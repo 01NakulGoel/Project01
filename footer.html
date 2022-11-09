@@ -5,57 +5,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="/CSS/footer.css">
-    <link rel="stylesheet" href="/CSS/slideShow.css">
-    <title>Fashion Company</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        body{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #footerMenu {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #footerMenu a {
+            text-decoration: none;
+            color: grey;
+        }
+
+        #footerMenu>div:nth-child(1) {
+            width: 18%;
+        }
+
+        #footerMenu>div:nth-child(2) {
+            width: 18%;
+        }
+
+        #footerMenu>div:nth-child(3) {
+            width: 30%;
+        }
+
+        #footerMenu>div:nth-child(4) {
+            width: 30%;
+            margin-top: 20px;
+        }
+
+        #footerMenu>div:nth-child(4)>div {
+            display: flex;
+            width: 100%;
+
+        }
+
+        #footerMenu>div:nth-child(4)>div {
+            margin-bottom: 22px;
+        }
+
+        #footerMenu>div:nth-child(4)>div>div:nth-child(2) * {
+            margin: 0px;
+            margin-left: 10px;
+            padding: 0px;
+        }
+
+        #footerMenu>div:nth-child(4) img {
+            width: 40px;
+
+        }
+
+        ;
+
+        #play {
+            width: 100%;
+        }
+
+        #play img {
+            width: 40%;
+        }
+
+        #footerMenu li {
+            list-style: none;
+        }
+
+        .footerHead {
+            color: black;
+            font-weight: 600;
+            margin: 20px 0px;
+            font-size: 15px;
+            list-style: none;
+        }
+
+        #social img {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+        }
+
+        #popularSearch {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: justify;
+        }
+
+        #popularSearch li {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        #popularSearch a {
+            text-decoration: none;
+            color: grey;
+            margin-right: 5px;
+            margin-bottom: 5px;
+
+            padding-right: 8px;
+            border-right: 1px solid black;
+        }
+
+        #popularFooter {
+            width: 80%;
+            margin: auto;
+        }
+
+        .footer-80 {
+            width: 80%;
+            margin: auto;
+        }
+
+        #footer-80>p,
+        #footer-80 li {
+            color: grey;
+        }
+
+        footer {
+            background-color: rgb(248, 248, 248);
+        }
+        #footerContact{
+            display: flex;
+            justify-content: space-between; 
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <div id="logo"> <img src="/logo.png" alt=""> </div>
-        <div id="nav-mega">
-            <div><a href="">MEN</a></div>
-
-            <div><a href="">WOMEN</a></div>
-            <div><a href="">KIDS</a></div>
-            <div><a href="">HOME & LIVING</a></div>
-            <div><a href=""> BEAUTY</a></div>
-            <div><a href="">STUDIO <sup style="color: red;">new</sup></a></div>
-        </div>
-        <div id="search">
-            <input type="text" placeholder="Search for products, brands and more">
-            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
-
-        </div>
-        <div id="cart">
-            <div>
-
-                <i class="fa-regular fa-user"></i>
-                <span>Profile</span>
-            </div>
-            <div>
-                <i class="fa-regular fa-heart"></i>
-                <span>Wishlist</span>
-            </div>
-            <div>
-                <i class="fa-solid fa-bag-shopping"></i>
-                <span>Bag</span>
-            </div>
-
-        </div>
-    </nav>
-    <div>
-        <div id="slide1"> </div>
-        <div id="slideBtn"></div>
-    </div>
-    <section id="slideShow">
-
-    </section>
-    <section id="allMarketing">
-    </section>
-    
     <footer>
         <div id="footerMenu">
             <div>
@@ -326,8 +407,7 @@
         </div>
         <div class="footer-80" id="footerContact">
             <div>
-                <p style="color: grey">In case of any concern,<a href="" style="text-decoration: none; color:black;">
-                        <b> Contact Us </b> </a>
+                <p style="color: grey">In case of any concern,<a href="" style="text-decoration: none; color:black;">  <b>  Contact Us    </b>      </a> 
                 </p>
             </div>
             <div>
@@ -407,8 +487,6 @@
             </p>
         </div>
     </footer>
-
 </body>
 
 </html>
-<script src="/assets.js"></script>
