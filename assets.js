@@ -409,7 +409,7 @@ for(let key in obj){
     h4.innerText=objH4[objH4_count]
     objH4_count++
 allMarketing.append(h4)
-display(obj[key],'link',allMarketing)
+display(obj[key],'/products/products.html',allMarketing)
 }
 
 
@@ -473,17 +473,13 @@ slideShow.forEach((image, i) => {
 
 
 
-let arr=[
-['imagelink',heading],
-[],
-[],
-[],
-[],
-[],
+let loginbtn=document.querySelector('#loginbtn')
 
+let loggedIn=JSON.parse(localStorage.getItem('loggedIn'))||{}
 
-
-
-
-]
+console.log(loggedIn)
+if(loggedIn.fullName!=undefined){
+    loginbtn.innerText=`Hello ${loggedIn.fullName}`
+    loginbtn.parentElement.setAttribute('href','/index.html')
+}
 

@@ -4,21 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-   <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/CSS/slideShow.css">
-    <title>Fashion Company</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="/CSS/navbar.css">
     <link rel="stylesheet" href="/CSS/footer.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #productPage {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+
+        #filter {
+            width: 20%;
+            /* border: 1px solid rgba(170, 170, 170, 0.973); */
+            position: sticky;
+            left: 10px;
+            height: 1000px;
+            top: 85px;
+        }
+
+        #filter>div {
+            /* position: sticky; */
+            width: 100%;
+            left: 0;
+            height: 900px;
+            bottom: 200px;
+
+        }
+
+        #products {
+            width: 77%;
+            /* border: 5px solid orange; */
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #products>div {
+            height: 350px;
+            margin: 20px 0px;
+        }
+
+        #product p {
+            margin: 5px 0px
+        }
+
+        #filter .filterBox {
+            border: 1px solid rgba(170, 170, 170, 0.973);
+            padding: 20px 3px;
+        }
+
+        .addToWishlist {
+            text-align: center;
+            width: 95%;
+            margin: 10px 5px 5px 5px;
+            background-color: white;
+            height: 43px;
+            padding: 7px;
+            font-size: 13px;
+            border-color: pink;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rating {
+            background-color: teal;
+            color: white;
+            height: 30px;
+            position: absolute;
+            margin-top: -50px;
+            margin-left: 10px;
+            width: 100px;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .filterHeading {
+            text-transform: capitalize;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .filterBox li {
+            margin: 10px 0px;
+            margin-left: 20px;
+            list-style: none;
+
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+        }
+
+        .top>div:nth-child(2) {
+            margin-right: 20px;
+
+        }
+
+        .top>div:nth-child(2) select {
+
+            height: 30px;
+            width: 250px;
+
+
+        }
+    </style>
 </head>
 
 <body>
     <nav>
-        <div id="logo"> <a href="/index.html"> <img src="/logo.png" alt="">  </a>  </div>
+        <div id="logo"> <a href="/index.html"> <img src="/logo.png" alt=""> </a> </div>
         <div id="nav-mega">
             <li><a href="/men.html">MEN</a>
                 <div class="downMenuContent">
@@ -174,7 +285,7 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li class="menuHead">  Maternity  </li>
+                            <li class="menuHead"> Maternity </li>
                             <li class="menuHead"> <a> Sunglasses & Frames </a> </li>
                             <li class="menuHead"> <a> Footwear </a> </li>
                             <li> <a> Flats </a> </li>
@@ -579,7 +690,9 @@
                         <ul>
                             <li> Welcome</li>
                             <li> To access account and manage orders</li>
-                          <a href="/login/login.html">    <li id="loginbtn">   LOGIN / SIGNUP</li> </a> 
+                            <a href="/login/login.html">
+                                <li id="loginbtn"> LOGIN / SIGNUP</li>
+                            </a>
                             <hr>
                             <li>Orders</li>
                             <li> Wishlist</li>
@@ -609,15 +722,55 @@
         </div>
     </nav>
 
-    <div>
-        <div id="slide1"> </div>
-        <div id="slideBtn"></div>
-    </div>
-    <section id="slideShow">
+    <div class="top">
 
-    </section>
-    <section id="allMarketing">
-    </section>
+
+        <div class="filterBox">
+            <ul>
+                <li class="filterHeading">
+                    filter
+                </li>
+            </ul>
+        </div>
+        <div>
+            <select name="" id="sortByRecommended" aria-placeholder="Sort-By:"> <b>Recommended</b>
+                <option value="Recomended"> Recomended</option>
+                <option value="Popularity">Popularity</option>
+                <option value="discounts">Better discounts</option>
+                <option value="High">Price: High to Low </option>
+                <option value="Low">Price: Low to High </option>
+                <option value="Rating">Customer Rating </option>
+                <option value="Whats New">Whats New </option>
+
+
+
+
+            </select>
+
+        </div>
+
+
+    </div>
+
+    <div id="productPage">
+
+
+
+        <div id="filter">
+
+            <div>
+            </div>
+        </div>
+
+
+        <div id="products">
+
+
+        </div>
+
+    </div>
+
+
     <footer>
         <div id="footerMenu">
             <div>
@@ -888,7 +1041,8 @@
         </div>
         <div class="footer-80" id="footerContact">
             <div>
-                <p style="color: grey">In case of any concern,<a href="" style="text-decoration: none; color:black;">  <b>  Contact Us    </b>      </a> 
+                <p style="color: grey">In case of any concern,<a href="" style="text-decoration: none; color:black;">
+                        <b> Contact Us </b> </a>
                 </p>
             </div>
             <div>
@@ -968,9 +1122,748 @@
             </p>
         </div>
     </footer>
-  
-
 </body>
 
 </html>
-<script src="/assets.js"></script>
+<script>
+    let mensData = [
+        {
+            title: "Urbano Fashion",
+            description: "Slim Tropical Printed Pure Cotton",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12377258/2020/9/11/ce1b7bcb-a65a-4eb0-a317-42ac02718f1e1599798741705UrbanoFashionPrintedMenRoundNeckDarkGreenT-Shirt1.jpg",
+
+            MRP: 1099,
+            Discount: 55,
+            Category: "T-shirt",
+            Brand: "Roadster",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "Roadster",
+            description: "Men Cotton Pure Cotton T-shirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1996777/2017/11/7/11510046815508-Roadster-Men-Black-Solid-Round-Neck-T-shirt-4011510046815294-1.jpg",
+            MRP: 499,
+            Discount: 50,
+            Category: "T-shirt",
+            Brand: "Puma",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "Roadster",
+            description: "Men Cotton Pure Cotton T-shirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1072681/2020/1/20/9de2d7dc-e239-4327-b7d0-096c80ac3a121579503443912-Roadster-Men-Charcoal-Melange-Printed-Round-Neck-T-shirt-364-1.jpg",
+            MRP: 1099,
+            Discount: 55,
+            Category: "T-shirt",
+            Brand: "Friskers",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "Dillinger",
+            description: "Men Cotton Pure Cotton T-shirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2378362/2018/6/9/270e0a7e-365b-4640-9433-b269c60bf3061528527188563-Moda-Rapido-Men-Maroon-Printed-Round-Neck-T-shirt-3811528527-1.jpg",
+            MRP: 999,
+            Discount: 30,
+            Category: "T-shirt",
+            Brand: "Friskers",
+            color: "red",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "Huetrap",
+            description: "Men Cotton Pure Cotton T-shirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11067734/2019/12/10/34b589c2-80b9-4ad9-81ea-84333fbc46761575972548055-DILLINGER-Men-Tshirts-4071575972546110-1.jpg",
+            MRP: 1299,
+            Discount: 20,
+            Category: "T-shirt",
+            Brand: "WROGN",
+            color: "white",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "Friskers",
+            description: "Men Cotton Pure Cotton T-shirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/12/1aab2a18-6774-4f83-b292-fe301755a3351576102551329-1.jpg",
+            MRP: 1099,
+            Discount: 10,
+            Category: "T-shirt",
+            Brand: "Puma",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Men Pure Cotton Casual Shirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1376577/2022/6/3/ea10ab6c-883e-437a-8780-ed87484393f81654235830793-Roadster-Men-Black--Grey-Checked-Casual-Sustainable-Shirt-42-1.jpg",
+            MRP: 3652,
+            Discount: 15,
+            Category: "Shirts",
+            Brand: "WROGN",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Men Pure Cotton Casual Shirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2038071/2019/4/9/ace5c891-0717-485c-8080-9c37c5c759821554799993054-Roadster-Men-Black--White-Slim-Fit-Solid-Casual-Shirt-322155-1.jpg",
+            MRP: 4561,
+            Discount: 55,
+            Category: "Shirts",
+            Brand: "Friskers",
+            color: "white",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Men Pure Cotton Casual Shirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14811424/2021/7/26/d5ffc4e7-f447-4df1-b417-9ac68372cd6e1627300540761-Campus-Sutra-Men-Shirts-6941627300540022-1.jpg",
+            MRP: 7540,
+            Discount: 30,
+            Category: "Shirts",
+            Brand: "Puma",
+            color: "blue",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Men Pure Cotton Casual Shirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12131930/2020/8/4/1ae4ee7b-2b06-478c-8cbe-d230eaced36b1596547667996-WROGN-Men-Shirts-101596547666184-1.jpg",
+            MRP: 9999,
+            Discount: 10,
+            Category: "Shirts",
+            Brand: "WROGN",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Men Pure Cotton Casual Shirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/7488102/2019/8/22/8002a744-0dad-4dbb-9481-cf0090134c3b1566454086786-Dennis-Lingo-Men-Pink-Slim-Fit-Solid-Casual-Shirt-9891566454-1.jpg",
+            MRP: 7852,
+            Discount: 5,
+            Category: "Shirts",
+            Brand: "Roadster",
+            color: "pink",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweatshirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20179238/2022/9/27/af1ecfe8-430c-4ed1-9b6b-02080257867a1664260062167RelaxedFitSweatshirt1.jpg",
+            MRP: 1520,
+            Discount: 20,
+            Category: "Sweatshirts",
+            Brand: "Puma",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweatshirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20221528/2022/9/29/500eb751-a2e3-402e-b5b7-30d485290a551664465419476CODEbyLifestyleBlackSweatshirtsCotton1.jpg",
+            MRP: 4500,
+            Discount: 32,
+            Category: "Sweatshirts",
+            Brand: "HERE&NOW",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweatshirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20239376/2022/9/30/a6e24aca-34da-4ac2-b785-47bc960bc7b21664558196365BossiniNavyBlueSweatshirtsCotton1.jpg",
+            MRP: 4512,
+            Discount: 12,
+            Category: "Sweatshirts",
+            Brand: "Friskers",
+            color: "blue",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweatshirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17167624/2022/2/16/4fd1bb4d-1a36-480a-8d67-8e856018fe821644989650030JompersMenGreyGeometricPrintedKurta1.jpg",
+            MRP: 1099,
+            Discount: 55,
+            Category: "Sweatshirts",
+            Brand: "Roadster",
+            color: "grey",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweatshirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20220078/2022/9/29/e7157d4c-a951-487d-8653-64a6c0a7c9981664465471597LouisPhilippeGreySweatshirt1.jpg",
+            MRP: 3211,
+            Discount: 21,
+            Category: "Sweatshirts",
+            Brand: "Puma",
+            color: "white",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweatshirt",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11957012/2020/10/10/979c611e-632f-4470-8930-5a12869c8b0c1602313038659-Roadster-Men-Sweatshirts-9561602313037381-1.jpg",
+            MRP: 10000,
+            Discount: 10,
+            Category: "Sweatshirts",
+            Brand: "WROGN",
+            color: "blue",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Kurtas",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13987972/2021/6/11/a6b97878-55c5-46af-8bdf-83fe434242011623386065975DENNISONMenPureCottonBeigeSolidKurta1.jpg",
+            MRP: 1000,
+            Discount: 25,
+            Category: "Kurtas",
+            Brand: "Puma",
+            color: "grey",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Kurtas",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17027012/2022/2/2/833e444b-27fa-4317-be0b-f5089cf83d1f1643814590550JompersMenGreenThreadWorkKurta1.jpg",
+            MRP: 2546,
+            Discount: 35,
+            Category: "Kurtas",
+            Brand: "Roadster",
+            color: "green",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Kurtas",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/8704533/2021/1/27/693b8c4a-eb1c-4ae1-a28f-0eb3005f63cb1611725553311-House-of-Pataudi-Men-Pink-Chikankari-Embroidered-Straight-Ku-3.jpg",
+            MRP: 5416,
+            Discount: 36,
+            Category: "Kurtas",
+            Brand: "Puma",
+            color: "pink",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Kurtas",
+            image: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17167624/2022/2/16/4fd1bb4d-1a36-480a-8d67-8e856018fe821644989650030JompersMenGreyGeometricPrintedKurta1.jpg",
+            MRP: 4500,
+            Discount: 45,
+            Category: "Kurtas",
+            Brand: "HERE&NOW",
+            color: 'white',
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Kurtas",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/7/5/1c8d36aa-d7a6-4598-a564-e236ddd64b301562320690270-1.jpg",
+            MRP: 15525,
+            Discount: 65,
+            Category: "Kurtas",
+            Brand: "Roadster",
+            color: "golden",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Jacket",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14296094/2021/12/17/112046e8-6656-43bc-9ade-7c3bb15f30c21639743459311-WROGN-Men-Coffee-Brown-Pure-Cotton-Tailored-Jacket-656163974-1.jpg",
+            MRP: 10990,
+            Discount: 85,
+            Category: "Jackets",
+            Brand: "WROGN",
+            color: "brown",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Jacket",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/5388190/2018/10/10/b41b573c-aef3-49b7-9c66-d9c3e405731f1539159453468-Roadster-Men-Navy-Solid-Bomber-5071539159452506-1.jpg",
+            MRP: 10449,
+            Discount: 35,
+            Category: "Jackets",
+            Brand: "Roadster",
+            color: "blue",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Jacket",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19869282/2022/9/9/d36fc130-e9be-4a5a-9a03-4ac1d01eb1111662725962144LouisPhilippeSportMenMulticolouredColourblockedCropBomberJac1.jpg",
+            MRP: 2504,
+            Discount: 15,
+            Category: "Jackets",
+            Brand: "Friskers",
+            color: "blue",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Jacket",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12288808/2020/10/14/7268d730-fc55-42b4-a84c-100c5b1f0bed1602675649664-Roadster-Men-Jackets-7551602675647705-1.jpg",
+            MRP: 1584,
+            Discount: 10,
+            Category: "Jackets",
+            Brand: "Puma",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Jacket",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/11/22/12ce20af-af98-49ef-ac25-a1b542c0936e1574443903530-1.jpg",
+            MRP: 2630,
+            Discount: 80,
+            Category: "Jackets",
+            Brand: "Roadster",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweater",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/18119252/2022/9/1/d94cdca6-858b-421d-b2fd-23ae2a7c0eb01662033765101-Kook-N-Keech-Men-Olive-Green-Pullover-3541662033764541-1.jpg",
+            MRP: 10154,
+            Discount: 95,
+            Category: "Sweaters",
+            Brand: "max",
+            color: "green",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweater",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20442964/2022/10/18/67626ecf-aff0-4482-acab-00b4b3c7101f1666114309926CantabilMenGreenRibbedPullover1.jpg",
+            MRP: 5214,
+            Discount: 85,
+            Category: "Sweaters",
+            Brand: "WROGN",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweater",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15654428/2021/10/6/20733fdc-554a-4990-b80b-6046b4b0ea5b1633503401601-Computerised-Jacquard-Sweater-2231633503401076-1.jpg",
+            MRP: 1099,
+            Discount: 55,
+            Category: "Sweaters",
+            Brand: "max",
+            color: "blue",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweater",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15654416/2021/10/6/2baa3df0-7590-4fcc-b291-9d84a775caa61633502646677-Computerised-Jacquard-Sweater-381633502646109-1.jpg",
+            MRP: 1099,
+            Discount: 55,
+            Category: "Sweaters",
+            Brand: "max",
+            color: "white",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweater",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15131252/2021/11/26/f965589d-5852-45f8-a20e-3c64e03c2f331637928565477-WROGN-Men-Sweaters-7681637928564594-1.jpg",
+            MRP: 1099,
+            Discount: 55,
+            Category: "Sweaters",
+            Brand: "Roadster",
+            color: "green",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweater",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/5151906/2018/11/20/bcd841f3-78f5-4252-96dd-081bf37d31771542712008080-Roadster-Men-Grey-Self-Design-Pullover-3611542712007765-1.jpg",
+            MRP: 14585,
+            Discount: 55,
+            Category: "Sweaters",
+            Brand: "Puma",
+            color: "grey",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Sweater",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15131350/2021/11/26/c96761af-ea35-40a7-8479-3d129ef0286b1637921031372-WROGN-Men-Sweaters-1321637921030849-1.jpg",
+            MRP: 11123,
+            Discount: 45,
+            Category: "Sweaters",
+            Brand: "Roadster",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Blazer",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/18192442/2022/6/14/ea3c1166-72a3-44f9-a990-3f1f6a3031681655188534607-INVICTUS-Men-Blazers-9311655188533964-1.jpg",
+            MRP: 2599,
+            Discount: 5,
+            Category: "Blazers",
+            Brand: "WROGN",
+            color: "blue",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Blazer",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20294010/2022/10/6/5d3d8c8c-496d-40df-b3d0-f7be3a8466821665075795574Blazers1.jpg",
+            MRP: 1099,
+            Discount: 55,
+            Category: "Blazers",
+            Brand: "max",
+            color: "blue",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Blazer",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19456852/2022/8/29/b30748c7-c44f-4fce-bc07-26f22716c1361661774662895-Louis-Philippe-Sport-Men-Blazers-5181661774662314-1.jpg",
+            MRP: 1099,
+            Discount: 55,
+            Category: "Blazers",
+            Brand: "max",
+            color: "grey",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Blazer",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19495064/2022/10/27/f5f37337-9e07-4c54-ac75-0938e57e62a61666860252422-The-Indian-Garage-Co-Men-Blazers-5111666860251899-1.jpg",
+            MRP: 1259,
+            Discount: 5,
+            Category: "Blazers",
+            Brand: "WROGN",
+            color: "green",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Blazer",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/8397951/2019/3/8/69cc3d5e-ba1b-433b-8720-e7aebed3b84b1552038058859-Mast--Harbour-Men-Blue-Solid-Single-Breasted-Casual-Blazer-8-1.jpg",
+            MRP: 1549,
+            Discount: 5,
+            Category: "Blazers",
+            Brand: "WROGN",
+            color: "blue",
+            rating: 4.2,
+            likes: "25k",
+        },
+        {
+            title: "",
+            description: "Mens Blazer",
+            image:
+                "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10313483/2019/12/11/8533b1c3-023b-4a9b-9073-0ab8dab09d071576038869737-Mast--Harbour-Men-Blazers-8621576038867198-1.jpg",
+            MRP: 1041,
+            Discount: 5,
+            Category: "Blazers",
+            Brand: "Roadster",
+            color: "black",
+            rating: 4.2,
+            likes: "25k",
+        },
+    ];
+
+    let mens1Data = [...mensData]
+    localStorage.setItem('mens1Data', JSON.stringify(mens1Data))
+
+    mens1Data = JSON.parse(localStorage.getItem('mens1Data')) || []
+    let wishlistData = JSON.parse(localStorage.getItem('wishlistData')) || []
+
+
+    let products = document.querySelector('#products')
+
+    function displayProduct(arr) {
+        products.innerHTML = ''
+        arr.forEach((data, i) => {
+
+            //This is a div in which each product will be stored
+            let div = document.createElement('div')
+
+            let img = document.createElement('img')
+            let h3 = document.createElement('h3')
+            let desc = document.createElement('p')
+            let Rs = document.createElement('p')
+            let btn = document.createElement('button')
+            let div2 = document.createElement('div')
+            let price = Math.floor((data.MRP * data.Discount) / 100)
+            let span = document.createElement('span')
+
+            img.setAttribute('src', data.image)
+            div2.append(img)
+
+            h3.innerText = data.Brand
+            desc.innerText = data.description
+            Rs.innerHTML = `Rs. ${price}  <s class='productStrike'>Rs.${data.MRP} </s>  &nbsp; <span class='productDiscount'>(${data.Discount} %) OFF </span>`
+            span.innerHTML = `${data.rating} <i class="fa-solid fa-star"></i> | ${data.likes}`
+            span.classList.add('rating')
+            btn.style.display = 'block'
+
+
+            div.append(div2, span, btn, h3, desc, Rs)
+            products.append(div)
+
+            btn.addEventListener('click', () => {
+                arr[i].wishlisted = true
+                btn.innerHTML = '<i style="color:red" class="fa-solid fa-heart"></i> Wishlisted'
+                btn.style.backgroundColor = 'grey'
+                wishlistData.push(data)
+                localStorage.setItem('wishlistData', JSON.stringify(wishlistData))
+                localStorage.setItem(`mens1Data`, JSON.stringify(arr))
+                console.log(wishlistData)
+            })
+
+            div.addEventListener('mouseover', () => {
+                arr = JSON.parse(localStorage.getItem(`mens1Data`))
+                h3.innerHTML = ''
+                desc.innerText = 'Size 42,40,38,36,32'
+                btn.classList.add('addToWishlist')
+                if (arr[i]['wishlisted'] == true) {
+                    btn.innerHTML = '<i style="color:red" class="fa-solid fa-heart"></i> Wishlisted'
+                    btn.style.backgroundColor = 'grey'
+
+                } else {
+                    btn.innerHTML = '<i class="fa-regular fa-heart"></i> Add to Wishlist'
+                    btn.style.backgroundColor = 'white'
+
+                }
+                div2.style.height = '240px'
+                div2.style.overflow = 'hidden'
+
+                span.style.width = '0px'
+
+                span.innerHTML = ''
+            })
+
+            div.addEventListener('mouseout', () => {
+                h3.innerText = data.Brand
+
+                desc.innerText = data.description
+                div2.style.height = '280px'
+
+                span.innerHTML = `${data.rating} <i class="fa-solid fa-star"></i> | ${data.likes}`
+                span.style.width = '100px'
+
+                btn.innerHTML = ''
+                btn.classList.remove('addToWishlist')
+
+            })
+
+
+        })
+    }
+
+
+    displayProduct(mens1Data)
+
+
+    let filterdata = {}
+    function filter(arr) {
+        let category = {}
+        let color = {}
+        let brand = {}
+        let price1 = []
+        let discounts = {}
+
+        arr.forEach(elem => {
+
+            category[elem.Category] = category[elem.Category] = category[elem.Category] + 1 || 1;
+            color[elem.color] = color[elem.color] = color[elem.color] + 1 || 1
+            brand[elem.Brand] = brand[elem.Brand] = brand[elem.Brand] + 1 || 1
+            let f = Math.floor((elem.MRP * elem.Discount) / 100)
+            price1.push(f)
+
+        })
+        let a = Math.max(...price1)
+        let b = Math.min(...price1)
+
+        filterdata = {
+            category, color, brand, Mrp: { high: a, low: b }
+
+        }
+
+    }
+
+    filter(mens1Data)
+    // console.log(filterdata)
+
+
+    let filterBox = document.querySelector('#filter>div')
+
+
+
+
+    function filterappend(obj) {
+
+        for (let elem in obj) {
+            let div = document.createElement('div')
+            let span = document.createElement('span')
+            span.innerText = elem
+            //gave class to the filter heading so that it is easily used         
+            span.classList.add('filterHeading')
+            div.classList.add('filterBox')
+            div.append(span)
+            let ul = document.createElement('ul')
+            let max = -Infinity
+            let value = ''
+
+            for (let key in obj[elem]) {
+                if (key == 'undefined') continue
+
+                let li = document.createElement('li')
+                let input = document.createElement('input')
+                input.setAttribute('type', 'checkbox')
+                let span = document.createElement('span')
+                span.style.marginLeft = '20px'
+                span.style.textTransform = 'capitalize'
+                input.setAttribute('value', key)
+                span.innerHTML = `${key} <span style='color:grey'>( ${obj[elem][key]} ) </span>`
+                li.append(input, span)
+                ul.append(li)
+
+            }
+
+
+            div.append(ul)
+            filterBox.append(div)
+        }
+
+    }
+
+    filterappend(filterdata)
+
+    let inputs = document.querySelectorAll('#filter input')
+    let checkedArr = []
+    inputs.forEach((a, i) => {
+        a.addEventListener('click', () => {
+            if (a.checked) {
+                checkedArr.push(a.value)
+            } else {
+                let val = checkedArr.indexOf(a.parentElement.innerText)
+                checkedArr.splice(val, 1)
+            }
+            console.log(checkedArr)
+            if (checkedArr.length == 0) {
+                displayProduct(mensData)
+
+            } else {
+
+                getFilteredData(checkedArr, mens1Data)
+            }
+
+
+        })
+    })
+
+
+
+
+
+    //need to make a function that takes an array and return the products
+
+
+
+    function getFilteredData(array, data) {
+        let filterCheckedData = []
+        for (let k = 0; k < array.length; k++) {
+            for (let i = 0; i < data.length; i++) {
+
+                for (let j in mensData[i]) {
+
+                    if (array[k] == data[i][j]) {
+                        filterCheckedData.push(mensData[i])
+
+                    }
+                }
+
+            }
+        }
+        return displayProduct(filterCheckedData)
+    }
+
+</script>

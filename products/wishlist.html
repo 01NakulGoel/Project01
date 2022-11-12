@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="products">
+
+    </div>
+</body>
+</html>
+
+<script>
+
+let wishlistData = JSON.parse(localStorage.getItem('wishlistData'))||[]
+let addToCartData=JSON.parse(localStorage.getItem('addToCartData'))||[]
+
+let products = document.querySelector('#products')
+
+    function displayProduct(arr) {
+        products.innerHTML = ''
+        arr.forEach((data, i) => {
+
+            //This is a div in which each product will be stored
+            let div = document.createElement('div')
+
+            let img = document.createElement('img')
+            let h3 = document.createElement('h3')
+            let desc = document.createElement('p')
+            let Rs = document.createElement('p')
+            let btn = document.createElement('button')
+            let div2 = document.createElement('div')
+            let price = Math.floor((data.MRP * data.Discount) / 100)
+            let span = document.createElement('span')
+
+            img.setAttribute('src', data.image)
+            div2.append(img)
+
+            h3.innerText = data.Brand
+            desc.innerText = data.description
+            Rs.innerHTML = `Rs. ${price}  <s class='productStrike'>Rs.${data.MRP} </s>  &nbsp; <span class='productDiscount'>(${data.Discount} %) OFF </span>`
+            span.innerHTML = `${data.rating} <i class="fa-solid fa-star"></i> | ${data.likes}`
+
+            span.classList.add('rating')
+            btn.style.display = 'block'
+
+            btn.innerText='Add To Cart'
+            div.append(div2, span, btn, h3, desc, Rs)
+            products.append(div)
+
+            btn.addEventListener('click', () => {
+                    btn.innerHTML = '<i style="color:red" class="fa-solid fa-heart"></i> Added to Cart'
+                    btn.style.backgroundColor = 'grey'
+
+                    addToCartData.push(data)
+
+                    localStorage.setItem('addToCartData', JSON.stringify(addToCartData))
+
+                    console.log(addToCartData)
+                })
+
+
+
+
+        })
+    }
+
+    displayProduct(wishlistData)
+
+</script>
+

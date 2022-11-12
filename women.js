@@ -1,4 +1,4 @@
-let womenPage = [
+let slideShow = [
   "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/3/a20271c6-249f-480b-bcc7-1b150516e54e1651599573998-Dressberry_Desk.jpg",
   "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/3/3f6d1e2a-5ef6-4921-be5d-443a11b11d801651599573985-Dresses_Desk.jpg",
   "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/3/bc89bda3-e7dc-42fc-91f8-e380f36303c11651599573964-Tops---Tees_Desk.jpg",
@@ -9,7 +9,6 @@ let womenPage = [
   "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/10/9dc6368b-8168-495f-8259-97e29f523b0c1649582887347-Loungewear_Desk.jpg",
   "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/10/7feef02b-0072-4c1b-b83d-4e46a5d93c6b1649530621162-Sangria_Desk_Banner.jpg",
   "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/10/c74bac2c-e09d-484f-8e25-c07747c867241649530728935-Tops---Tees_Desk.jpg",
-  "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/4/10/38f37101-f335-44be-af8f-5d53de15c75e1649530843725-Casual---Sports-Shoes_Desk--1-.jpg",
 ];
 
 let biggestDealsOnTopBrands = [
@@ -78,3 +77,90 @@ let trendingInAccessories = [
   "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/21/bc36f35b-f5ce-4168-bd96-d3c1f65ec4e21598030134870-Content-mostselling-Accessories-Rosegoldwatch.jpeg",
   "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/5e68d729-b955-431c-930c-931d8b452d421597840217983-Content-accessories-color-white.png",
 ];
+
+
+let slide1 = document.querySelector("#slide1");
+let slideBtn = document.querySelector("#slideBtn");
+let div1 = document.createElement("div");
+slide1.append(div1);
+
+slideShow.forEach((image, i) => {
+  let img = document.createElement("img");
+  let btn = document.createElement("button");
+  slideBtn.append(btn);
+  img.src = image;
+  div1.append(img);
+  let x = setInterval(slideShowIsOn, 5000);
+
+  btn.addEventListener("click", () => {
+    clearInterval(x);
+    div1.style.marginLeft = `${i * -100}vw`;
+  });
+  let c = 0;
+  function slideShowIsOn() {
+    if (c == slideShow.length) {
+      c = 0;
+    }
+    div1.style.marginLeft = `${c * -100}vw`;
+    c++;
+  }
+});
+
+let womenHeading = [
+  "BIGGEST DEALS ON TOP BRANDS",
+  "CATEGORIES TO BAG",
+  "EXPLORE TOP BRANDS",
+  "TRENDING IN WESTERN WEAR",
+  "TRENDING IN INDIAN WEAR",
+  "TRENDING IN SPORTS WEAR",
+  "TRENDING IN FOOTWEAR",
+  "TRENDING IN ACCESSORIES",
+];
+
+let womenImage = {
+  biggestDealsOnTopBrands,
+  categoriesToBag,
+  topBrand,
+  trendingInWesternWear,
+  trendinInIndianWear,
+  trendingInSportsWear,
+  trendingInFootwear,
+  trendingInAccessories,
+};
+
+let allMarketing=document.querySelector('#allMarketing')
+
+let objH4_count=0
+for(let key in womenImage){
+    let h4=document.createElement('h4')
+    h4.innerText=womenHeading[objH4_count]
+    objH4_count++
+allMarketing.append(h4)
+display(womenImage[key],'link',allMarketing)
+}
+
+
+
+
+function display(arr, link, section) {
+    let division=document.createElement('div')
+  arr.forEach((elem, i) => {
+    let img = document.createElement("img");
+    img.setAttribute("src", elem);
+    let a = document.createElement("a");
+    a.setAttribute("href", link);
+    a.append(img);
+    division.append(a)
+    section.append(division);
+  });
+  
+  if(arr.length<8){
+   division.style.gridTemplateColumns=`repeat(${arr.length},1fr)`
+  }else if(arr.length<=20){
+   division.style.gridTemplateColumns=`repeat(${arr.length/2},1fr)`
+
+  }else{
+   division.style.gridTemplateColumns=`repeat(${arr.length/3},1fr)`
+
+  }
+}
