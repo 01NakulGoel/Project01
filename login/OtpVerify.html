@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #login {
+            width: 370px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 500px;
+            background-color: white;
+            margin-top: 20px;
+        }
+
+        #login img {
+            width: 35%;
+        }
+
+        #OTP {
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        #OTP>input {
+            width: 30px;
+            height: 30px;
+            margin-left: 5px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #login>* {
+            margin: 15px 0px;
+            padding: 0px 20px;
+            width: 89%;
+
+        }
+
+        #login>div:nth-child(1) {
+            margin: 5px 0px;
+        }
+
+        #sentTo {
+            margin-top: 10px;
+        }
+
+        nav {
+            width: 100%;
+
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            align-items: center;
+        }
+
+        nav>a {
+            height: 80%;
+        }
+
+        nav img {
+            height: 100%;
+        }
+
+
+
+        body {
+            background-color: rgb(223, 197, 223);
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/index.html">
+
+            <img src="/logo.png" alt="">
+        </a>
+    </nav>
+    <div id="login">
+        <div>
+
+            <img src="https://constant.myntassets.com/pwa/assets/img/3a438cb4-c9bf-4316-b60c-c63e40a1a96d1548071106233-mobile-verification.jpg"
+                alt="">
+        </div>
+        <div>
+
+            <h3>Verify with OTP</h3>
+            <p id="sentTo"></p>
+
+        </div>
+        <div id="OTP">
+            <input type="tel" name="" id="a" maxlength="1" autocomplete="off" data-val="0">
+            <input type="tel" name="" id="b" maxlength="1" autocomplete="off" data-val="1">
+            <input type="tel" name="" id="c" maxlength="1" autocomplete="off" data-val="2">
+            <input type="tel" name="" id="d" maxlength="1" autocomplete="off" data-val="3">
+        </div>
+        <p id="resendOTP">Resend OTP</p>
+        <p>Log in using <a href="">Password</a> </p>
+        <p>Having trouble logging in <a href="">Get help</a> </p>
+
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
+<script>
+
+    let mobileNumber = JSON.parse(localStorage.getItem('mobileNumber'))
+    let sentTo = document.querySelector('#sentTo')
+
+    sentTo.innerHTML = `Sent to <b>${mobileNumber}</b>`
+
+    let otp = `${Math.random()}`.substr(3, 4)
+    alert(`This is your OTP- ${otp}  for login to Fashioncompany.com, do not share this OTP with anyone.`)
+    let a = document.querySelector('#a')
+    let b = document.querySelector('#b')
+    let c = document.querySelector('#c')
+    let d = document.querySelector('#d')
+
+    d.addEventListener('input', () => {
+        let userEnteredOTP = a.value + b.value + c.value + d.value
+        if (userEnteredOTP == otp) {
+            alert('Correct OTP')
+            let FCMasterData = JSON.parse(localStorage.getItem('FCmasterData'))||[]
+
+            FCMasterData.forEach((elem, i) => {
+                console.log(10)
+                if (elem.mobileNumber == mobileNumber) {
+                    localStorage.setItem('loggedIn',JSON.stringify(elem))
+                    alert('logged in succesfully')
+                    window.location.href = '/index.html'
+                }
+
+            });
+setTimeout(()=>{
+    window.location.href='/login/signup.html'
+},3000)
+            
+
+
+        }
+        else {
+            alert('incorrect OTP')
+            window.location.href = '/login/OtpVerify.html'
+        }
+
+
+
+    })
+
+
+    console.log(otp)
+</script>

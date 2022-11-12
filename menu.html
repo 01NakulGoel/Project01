@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/navbar.css">
     <title>Document</title>
     <style>
         * {
             margin: 0px;
             padding: 0px;
-            font-family: sans-serif;
+            font-family: 'Cabin', sans-serif;
+            ;
         }
 
         nav {
@@ -47,10 +51,11 @@
 
         .downMenuContent>div:nth-child(even) {
             background-color: rgb(238, 230, 230);
+            width: 17%;
         }
 
         #nav-mega>li {
-            padding: 32px 0px;
+            padding: 32px 10px;
         }
 
         #nav-mega>li:hover .downMenuContent {
@@ -156,6 +161,7 @@
             width: 90%;
             outline: none;
             height: 85%;
+            background-color: rgba(248, 239, 239, 0.904);
 
         }
 
@@ -193,12 +199,8 @@
 
 
 
-        li {
+        #nav-mega li {
             list-style: none;
-        }
-
-        body>div {
-            display: flex;
         }
 
         .menuCol {
@@ -216,7 +218,25 @@
 
         .menuHead {
             color: red;
-            margin-top: 20px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .downMenuContent .menuHead:hover {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .downMenuContent li {
+            font-size: 14px;
+            color-scheme: grey;
+        }
+
+        .downMenuContent li:hover {
+            font-size: 15px;
+            color: black;
+            cursor: pointer;
         }
 
         #cart>div .downMenuContent {
@@ -227,7 +247,15 @@
         }
 
         #cart>div .downMenuContent li {
-            margin: 5px;
+            margin: 10px 5px;
+
+            font-size: 14px;
+            list-style: none;
+        }
+
+        #cart>div .downMenuContent li:hover {
+            font-size: 15px;
+
         }
 
 
@@ -240,15 +268,31 @@
             text-align: left;
         }
 
+        #loginbtn {
+            /* margin: 20px; */
+            width: 80%;
+            padding: 5px;
+            height: 20px;
+            border-radius: 10px;
+            border: 1px solid pink;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            /* color: black; */
+        }
+
         /* //menu drop down css */
     </style>
 </head>
 
 <body>
     <nav>
-        <div id="logo"> <img src="/logo.png" alt=""> </div>
+        <div id="logo"> <a href="/index.html"> <img src="/logo.png" alt="">  </a>  </div>
+
         <div id="nav-mega">
-            <li><a href="">MEN</a>
+            <li><a href="/men.html">MEN</a>
                 <div class="downMenuContent">
 
                     <div class="menuCol">
@@ -263,6 +307,7 @@
                             <li> Blazers & Coats</li>
                             <li>Suits </li>
                             <li>Rain Jackets </li>
+                            <br>
                             <hr>
                             <li class="menuHead">Indian & Festive Wear </li>
                             <li>Kurtas & Kurta Sets </li>
@@ -279,13 +324,17 @@
                             <li> Formal Trousers </li>
                             <li> Shorts </li>
                             <li> Track Pants & Joggers </li>
-                            <li> Innerwear & Sleepwear </li>
+                            <br>
+                            <hr>
+                            <li class="menuHead"> Innerwear & Sleepwear </li>
                             <li> Briefs & Trunks </li>
                             <li> Boxers </li>
                             <li> Vests </li>
                             <li> Sleepwear & Loungewear </li>
                             <li> Thermals </li>
-                            <li> Plus Size </li>
+                            <br>
+                            <hr>
+                            <li class="menuHead"> Plus Size </li>
 
 
 
@@ -301,14 +350,16 @@
                             <li> Sandals & Floaters </li>
                             <li> Flip Flops </li>
                             <li> Socks </li>
-                            <li> Personal Care & Grooming </li>
-                            <li> Sunglasses & Frames </li>
-                            <li> Watches </li>
+                            <br>
+                            <hr>
+                            <li class="menuHead"> Personal Care & Grooming </li>
+                            <li class="menuHead"> Sunglasses & Frames </li>
+                            <li class="menuHead"> Watches </li>
                         </ul>
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Sports & Active Wear </li>
+                            <li class="menuHead"> Sports & Active Wear </li>
                             <li> Sports Shoes </li>
                             <li> Sports Sandals </li>
                             <li> Active T-Shirts </li>
@@ -317,7 +368,9 @@
                             <li> Jackets & Sweatshirts </li>
                             <li> Sports Accessories </li>
                             <li> Swimwear </li>
-                            <li> Gadgets </li>
+                            <br>
+                            <hr>
+                            <li class="menuHead"> Gadgets </li>
                             <li> Smart Wearables </li>
                             <li> Fitness Gadgets </li>
                             <li> Headphones </li>
@@ -326,7 +379,7 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Fashion Accessories </li>
+                            <li class="menuHead"> Fashion Accessories </li>
                             <li> Wallets </li>
                             <li> Belts </li>
                             <li> Perfumes & Body Mists </li>
@@ -339,8 +392,10 @@
                             <li> Phone Cases </li>
                             <li> Rings & Wristwear </li>
                             <li> Helmets </li>
-                            <li> Bags & Backpacks </li>
-                            <li> Luggages & Trolleys </li>
+                            <br>
+                            <hr>
+                            <li class="menuHead"> Bags & Backpacks </li>
+                            <li class="menuHead"> Luggages & Trolleys </li>
                         </ul>
                     </div>
 
@@ -349,7 +404,7 @@
                 </div>
 
             </li>
-            <li><a href="">WOMEN</a>
+            <li><a href="/women.html">WOMEN</a>
                 <div class="downMenuContent">
                     <div class="menuCol">
                         <ul>
@@ -364,6 +419,7 @@
                             <li> Lehenga Cholis </li>
                             <li> Dupattas & Shawls </li>
                             <li> Jackets </li>
+                            <hr>
                             <li class="menuHead"> Belts, Scarves & More </li>
                             <li class="menuHead"> Watches & Wearables </li>
                         </ul>
@@ -384,12 +440,13 @@
                             <li> Sweaters & Sweatshirts</li>
                             <li> Jackets & Coats</li>
                             <li> Blazers & Waistcoats</li>
+                            <br>
                             <li class="menuHead"> Plus Size</li>
                         </ul>
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li class="menuHead"> <a> Maternity </a> </li>
+                            <li class="menuHead"> Maternity </li>
                             <li class="menuHead"> <a> Sunglasses & Frames </a> </li>
                             <li class="menuHead"> <a> Footwear </a> </li>
                             <li> <a> Flats </a> </li>
@@ -397,6 +454,7 @@
                             <li> <a> Heels </a> </li>
                             <li> <a> Boots </a> </li>
                             <li> <a> Sports Shoes & Floaters </a> </li>
+                            <hr>
                             <li class="menuHead"> <a> Sports & Active Wear </a> </li>
                             <li> <a> Clothing </a> </li>
                             <li> <a> Footwear </a> </li>
@@ -413,6 +471,7 @@
                             <li> Sleepwear & Loungewear </li>
                             <li> Swimwear </li>
                             <li> Camisoles & Thermals </li>
+                            <hr>
                             <li class="menuHead"> Beauty & Personal Care </li>
                             <li> Makeup </li>
                             <li> Skincare </li>
@@ -428,10 +487,12 @@
                             <li> Fitness Gadgets </li>
                             <li> Headphones </li>
                             <li> Speakers </li>
+                            <hr>
                             <li class="menuHead"> Jewellery </li>
                             <li> Fashion Jewellery </li>
                             <li> Fine Jewellery </li>
                             <li> Earrings </li>
+                            <hr>
                             <li class="menuHead"> Backpacks </li>
                             <li class="menuHead"> Handbags, Bags & Wallets </li>
                             <li class="menuHead"> Luggages & Trolleys </li>
@@ -441,11 +502,11 @@
                 </div>
             </li>
 
-            <li><a href="">KIDS</a>
+            <li><a href="/kids.html">KIDS</a>
                 <div class="downMenuContent">
                     <div class="menuCol">
                         <ul>
-                            <li> Boys Clothing </li>
+                            <li class="menuHead"> Boys Clothing </li>
                             <li> T-Shirts </li>
                             <li> Shirts </li>
                             <li> Shorts </li>
@@ -463,7 +524,7 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Girls Clothing </li>
+                            <li class="menuHead"> Girls Clothing </li>
                             <li> Dresses </li>
                             <li> Tops </li>
                             <li> Tshirts </li>
@@ -483,7 +544,7 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Footwear </li>
+                            <li class="menuHead"> Footwear </li>
                             <li> Casual Shoes </li>
                             <li> Flipflops </li>
                             <li> Sports Shoes </li>
@@ -492,7 +553,8 @@
                             <li> Heels </li>
                             <li> School Shoes </li>
                             <li> Socks </li>
-                            <li> Toys </li>
+                            <hr>
+                            <li class="menuHead"> Toys </li>
                             <li> Learning & Development </li>
                             <li> Activity Toys </li>
                             <li> Soft Toys </li>
@@ -501,7 +563,7 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Infants </li>
+                            <li class="menuHead"> Infants </li>
                             <li> Bodysuits </li>
                             <li> Rompers & Sleepsuits </li>
                             <li> Clothing Sets </li>
@@ -511,20 +573,22 @@
                             <li> Winter Wear </li>
                             <li> Innerwear & Sleepwear </li>
                             <li> Infant Care </li>
-                            <li> Home & Bath </li>
-                            <li> Personal Care </li>
+                            <hr>
+                            <li class="menuHead"> Home & Bath </li>
+                            <li class="menuHead"> Personal Care </li>
                         </ul>
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Kids Accessories </li>
+                            <li class="menuHead"> Kids Accessories </li>
                             <li> Bags & Backpacks </li>
                             <li> Watches </li>
                             <li> Jewellery & Hair accessory </li>
                             <li> Sunglasses </li>
                             <li> Masks & Protective Gears </li>
                             <li> Caps & Hats </li>
-                            <li> Brands </li>
+                            <hr>
+                            <li class="menuHead"> Brands </li>
                             <li> H&M </li>
                             <li> Max Kids </li>
                             <li> Pantaloons </li>
@@ -539,11 +603,11 @@
 
             </li>
 
-            <li><a href="">HOME & LIVING</a>
+            <li><a href="/home&living.html">HOME & LIVING</a>
                 <div class="downMenuContent">
                     <div class="menuCol">
                         <ul>
-                            <li> Bed Linen & Furnishing </li>
+                            <li class="menuHead"> Bed Linen & Furnishing </li>
                             <li> Bed Runners </li>
                             <li> Mattress Protectors </li>
                             <li> Bedsheets </li>
@@ -554,7 +618,8 @@
                             <li> Diwan Sets </li>
                             <li> Chair Pads & Covers </li>
                             <li> Sofa Covers </li>
-                            <li> Flooring </li>
+                            <hr>
+                            <li class="menuHead"> Flooring </li>
                             <li> Floor Runners </li>
                             <li> Carpets </li>
                             <li> Floor Mats & Dhurries </li>
@@ -563,7 +628,7 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Bath </li>
+                            <li class="menuHead"> Bath </li>
                             <li> Bath Towels </li>
                             <li> Hand & Face Towels </li>
                             <li> Beach Towels </li>
@@ -572,7 +637,8 @@
                             <li> Bath Robes </li>
                             <li> Bathroom Accessories </li>
                             <li> Shower Curtains </li>
-                            <li> Lamps & Lighting </li>
+                            <hr>
+                            <li class="menuHead"> Lamps & Lighting </li>
                             <li> Floor Lamps </li>
                             <li> Ceiling Lamps </li>
                             <li> Table Lamps </li>
@@ -583,7 +649,7 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Home Décor </li>
+                            <li class="menuHead"> Home Décor </li>
                             <li> Plants & Planters </li>
                             <li> Aromas & Candles </li>
                             <li> Clocks </li>
@@ -595,13 +661,14 @@
                             <li> Fountains </li>
                             <li> Showpieces & Vases </li>
                             <li> Ottoman </li>
-                            <li> Cushions & Cushion Covers </li>
-                            <li> Curtains </li>
+                            <hr>
+                            <li class="menuHead"> Cushions & Cushion Covers </li>
+                            <li class="menuHead"> Curtains </li>
                         </ul>
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Home Gift Sets </li>
+                            <li class="menuHead"> Home Gift Sets </li>
                             <li> Kitchen & Table </li>
                             <li> Table Runners </li>
                             <li> Dinnerware & Serveware </li>
@@ -610,7 +677,9 @@
                             <li> Kitchen Storage & Tools </li>
                             <li> Bar & Drinkware </li>
                             <li> Table Covers & Furnishings </li>
-                            <li> Storage </li>
+                            <hr>
+
+                            <li class="menuHead"> Storage </li>
                             <li> Bins </li>
                             <li> Hangers </li>
                             <li> Organisers </li>
@@ -622,7 +691,7 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Brands </li>
+                            <li class="menuHead"> Brands </li>
                             <li> H&M </li>
                             <li> Marks & Spencer </li>
                             <li> Home Centre </li>
@@ -645,12 +714,12 @@
                 </div>
             </li>
 
-            <li><a href=""> BEAUTY</a>
+            <li><a href="beauty.html"> BEAUTY</a>
 
                 <div class="downMenuContent">
                     <div class="menuCol">
                         <ul>
-                            <li> Makeup </li>
+                            <li class="menuHead"> Makeup </li>
                             <li> Lipstick </li>
                             <li> Lip Gloss </li>
                             <li> Lip Liner </li>
@@ -667,11 +736,11 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Skincare, Bath & Body </li>
+                            <li class="menuHead"> Skincare, Bath & Body </li>
                             <li> Face Moisturiser </li>
                             <li> Cleanser </li>
                             <li> Masks & Peel </li>
-                            Sunscreen
+                            <li> Sunscreen </li>
                             <li> Serum </li>
                             <li> Face Wash </li>
                             <li> Eye Cream </li>
@@ -680,13 +749,15 @@
                             <li> Body Wash </li>
                             <li> Body Scrub </li>
                             <li> Hand Cream </li>
-                            <li> Baby Care </li>
-                            <li> Masks </li>
+                            <hr>
+
+                            <li class="menuHead"> Baby Care </li>
+                            <li class="menuHead"> Masks </li>
                         </ul>
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Haircare </li>
+                            <li class="menuHead"> Haircare </li>
                             <li> Shampoo </li>
                             <li> Conditioner </li>
                             <li> Hair Cream </li>
@@ -695,7 +766,9 @@
                             <li> Hair Color </li>
                             <li> Hair Serum </li>
                             <li> Hair Accessory </li>
-                            <li> Fragrances </li>
+                            <hr>
+
+                            <li class="menuHead"> Fragrances </li>
                             <li> Perfume </li>
                             <li> Deodorant </li>
                             <li> Body Mist </li>
@@ -703,24 +776,25 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Appliances </li>
+                            <li class="menuHead"> Appliances </li>
                             <li> Hair Straightener </li>
                             <li> Hair Dryer </li>
                             <li> Epilator </li>
-                            <li> Men's Grooming </li>
+                            <li class="menuHead"> Men's Grooming </li>
                             <li> Trimmers </li>
                             <li> Beard Oil </li>
                             <li> Hair Wax </li>
-                            <li> Beauty Gift & Makeup Set </li>
+                            <li class="menuHead"> Beauty Gift & Makeup Set </li>
                             <li> Beauty Gift </li>
                             <li> Makeup Kit </li>
-                            <li> Premium Beauty </li>
-                            <li> Wellness & Hygiene </li>
+                            <hr>
+                            <li class="menuHead"> Premium Beauty </li>
+                            <li class="menuHead"> Wellness & Hygiene </li>
                         </ul>
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li> Top Brands </li>
+                            <li class="menuHead"> Top Brands </li>
                             <li> Lakme </li>
                             <li> Maybelline </li>
                             <li> LOreal </li>
@@ -777,14 +851,16 @@
                         <ul>
                             <li> Welcome</li>
                             <li> To access account and manage orders</li>
-                            <li> LOGIN / SIGNUP</li>
-                            <br>
+                            <a href="/login/login.html">
+                                <li id="loginbtn"> LOGIN / SIGNUP</li>
+                            </a>
+                            <hr>
                             <li>Orders</li>
                             <li> Wishlist</li>
                             <li> Gift Cards</li>
                             <li> Contact Us</li>
                             <li> Myntra InsiderNew</li>
-                            <br>
+                            <hr>
                             <li> Myntra Credit</li>
                             <li> Coupons</li>
                             <li> Saved Cards</li>

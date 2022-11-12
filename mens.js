@@ -1,4 +1,4 @@
-let menSlideshow = [
+let slideShow = [
   "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/3/e384cb32-690c-4ccf-a6cb-61df36960bb21651599573972-Workwear_Desk.jpg",
   "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/3/b54399f0-6ed5-44b3-84b0-e9d5c1657aaa1651599573991-CR7_Desk_Baner.jpg",
   "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/3/846beb79-ada7-48c3-a6c6-4448f276c2111651599573979-Sports-Shoes_Desk.jpg",
@@ -71,3 +71,91 @@ let trendingInAccessories = [
   "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/8363b55c-446f-4de2-bc5b-e75fd6fdfb2d1597840217862-Content-accessories-brand-fastrack.png",
   "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/274b3659-420d-43c2-8e4c-17249e6eaf8d1597840218139-Content-accessories-trend-minimalist.png",
 ];
+
+
+
+let slide1 = document.querySelector("#slide1");
+let slideBtn = document.querySelector("#slideBtn");
+let div1 = document.createElement("div");
+slide1.append(div1);
+
+slideShow.forEach((image, i) => {
+  let img = document.createElement("img");
+  let btn = document.createElement("button");
+  slideBtn.append(btn);
+  img.src = image;
+  div1.append(img);
+  let x = setInterval(slideShowIsOn, 5000);
+
+  btn.addEventListener("click", () => {
+    clearInterval(x);
+    div1.style.marginLeft = `${i * -100}vw`;
+  });
+  let c = 0;
+  function slideShowIsOn() {
+    if (c == slideShow.length) {
+      c = 0;
+    }
+    div1.style.marginLeft = `${c * -100}vw`;
+    c++;
+  }
+});
+
+let menHeading = [
+  "BIGGEST DEALS ON TOP BRANDS",
+  "CATEGORIES TO BAG",
+  "EXPLORE TOP BRANDS",
+  "MYNTRA LUXE",
+  "TRENDING IN INDIAN WEAR",
+  "TRENDING IN SPORTS WEAR",
+  "TRENDING IN FOOTWEAR",
+  "TRENDING IN ACCESSORIES",
+];
+let menImage = {
+  biggestDealsOnTopBrands,
+  categoriesToBag,
+  exploreTopBrands,
+  myntraLuke,
+  trendinInIndianWear,
+  trendingInSportsWear,
+  trendingInFootwear,
+  trendingInAccessories,
+};
+
+
+let allMarketing=document.querySelector('#allMarketing')
+
+let objH4_count=0
+for(let key in menImage){
+    let h4=document.createElement('h4')
+    h4.innerText=menHeading[objH4_count]
+    objH4_count++
+allMarketing.append(h4)
+display(menImage[key],'link',allMarketing)
+}
+
+
+
+
+function display(arr, link, section) {
+    let division=document.createElement('div')
+  arr.forEach((elem, i) => {
+    let img = document.createElement("img");
+    img.setAttribute("src", elem);
+    let a = document.createElement("a");
+    a.setAttribute("href", link);
+    a.append(img);
+    division.append(a)
+    section.append(division);
+  });
+  
+  if(arr.length<8){
+   division.style.gridTemplateColumns=`repeat(${arr.length},1fr)`
+  }else if(arr.length<=20){
+   division.style.gridTemplateColumns=`repeat(${arr.length/2},1fr)`
+
+  }else{
+   division.style.gridTemplateColumns=`repeat(${arr.length/3},1fr)`
+
+  }
+}

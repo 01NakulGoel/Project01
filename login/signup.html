@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        border: black;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        align-items: center;
+        margin-bottom: 40px;
+        position: sticky;
+        top: 0;
+    }
+
+    nav>a {
+        height: 80%;
+    }
+
+    nav img {
+        height: 100%;
+    }
+
+    body {
+        background-color: pink;
+
+    }
+
+    #signup {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: pink;
+        height: 100vh;
+    }
+
+    #signup>form {
+        background-color: white;
+        width: 350px;
+        height: 100%;
+        padding: 20px 30px;
+    }
+
+    #signup>form>div {
+        height: 40px;
+        margin: 10px 0px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .form-big {
+        width: 100%;
+        height: 30px;
+    }
+
+    form>div:nth-child(2) {
+        display: flex;
+        justify-content: space-between !important;
+    }
+
+    #signup>form>div:nth-child(3),
+    #signup>form>div:nth-child(5),
+    #signup>form>div:nth-child(6),
+    #signup>form>div:nth-child(8),
+    #signup>form>div:nth-child(10) {
+        border: 1px solid grey;
+
+    }
+
+    #signup>form>div:nth-child(7) {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #signup>form p {
+        color: grey;
+    }
+
+    #signup>form>div:nth-child(4) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: -10px;
+    }
+
+    #signup>form>div:nth-child(4) span {
+        border: 1px solid grey;
+        width: 24%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(218, 214, 214);
+        color: rgb(185, 185, 185);
+    }
+
+    #signup>form input[type='submit'] {
+        width: 100%;
+        height: 50px;
+        color: white;
+        background-color: rgb(255, 83, 112);
+        position: sticky;
+        bottom: 0px;
+        margin-top: 50px;
+    }
+
+
+
+    #signup>form>div:nth-child(3) input,
+    #signup>form>div:nth-child(5) input,
+    #signup>form>div:nth-child(6) input,
+    #signup>form>div:nth-child(8) input,
+    #signup>form>div:nth-child(10) input {
+        outline: 0px;
+        border: 0px;
+        margin-left: 20px;
+
+    }
+</style>
+
+<body>
+    <nav>
+        <a href="/index.html">
+
+            <img src="/logo.png" alt="">
+        </a>
+    </nav>
+    <div>
+        <div id="signup">
+            <form action="" id="form">
+                <div>
+                    <h3>Complete your Signup</h3>
+                </div>
+                <div>
+                    <div>
+                        <p>Mobile Number</p>
+                        <h3 id="mobileNumber">9654874125</h3>
+
+                    </div>
+                    <div>
+                        <i class="fa-sharp fa-solid fa-circle-check" style="color: rgb(31, 235, 31);font-size: 20px;""></i>
+                    </div>
+
+                </div>
+
+                    <div>
+
+                    <input type=" text" class="form-big" required name="" id="password" autocomplete="off"
+                            placeholder="Create Password" maxlength="10" minlength="8"><i class="fa-solid fa-eye"
+                                id="passwordEye" style=" margin-right: 10px;"></i>
+                    </div>
+                    <div>
+                        <span id="charPass">8 Characters</span>
+                        <span id="specialCharPass">1 Special</span>
+                        <span id="upperCasePass">1 Uppercase</span>
+                        <span id="numericPass">1 Numeric</span>
+                    </div>
+                    <div>
+
+                        <input autocomplete="off" type="text" required class="form-big" name="" id="fullName"
+                            placeholder="full Name">
+                    </div>
+                    <div>
+
+                        <input autocomplete="off" type="email" required class="form-big" name="" id="email"
+                            placeholder="Email">
+                    </div>
+                    <div>
+
+                        <span>Select Gender</span>
+                        <input autocomplete="off" type="radio" name="gender" id="a" value="female"> <span>Female</span>
+                        <input autocomplete="off" type="radio" name="gender" id="b" value="mail"> <span>Male</span>
+                    </div>
+                    <div>
+                        <span style="margin-left: 10px">+91</span> <input required type="tel" class="form-big" name=""
+                            id="alternateMobileNumber" placeholder="Alternate Mobile Number" autocomplete="off">
+                    </div>
+                    <p>
+                        this will help recover your account if needed
+                    </p>
+                    <div>
+                        <input autocomplete="off" type="text" required name="" class="form-big" id="hintAlternateNumber"
+                            placeholder="Hint Name Alternate Number">
+                    </div>
+                    <p>this name will be hint for your alternate number</p>
+                    <div>
+                        <input type="submit" value="CREATE ACCOUNT">
+                    </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    let FCMasterData = JSON.parse(localStorage.getItem('FCmasterData')) || []
+    let userNumber = JSON.parse(localStorage.getItem('mobileNumber'))
+
+
+    let form = document.querySelector('#form')
+    let password = document.querySelector('#password')
+    let fullName = document.querySelector('#fullName')
+    let email = document.querySelector('#email')
+    let gender = document.getElementsByName('gender')
+    let alternateMobileNumber = document.querySelector('#alternateMobileNumber')
+    let hintAlternateNumber = document.querySelector('#hintAlternateNumber')
+    let mobileNumber = document.querySelector('#mobileNumber')
+    let passwordEye = document.querySelector('#passwordEye')
+    mobileNumber.innerText = userNumber
+    //span tag selecting which will check the password
+    let charPass = document.querySelector('#charPass')
+    let specialCharPass = document.querySelector('#specialCharPass')
+    let upperCasePass = document.querySelector('#upperCasePass')
+    let numericPass = document.querySelector('#numericPass')
+
+    let c = 0
+    passwordEye.addEventListener('click', () => {
+
+        if (c == 0) {
+            password.setAttribute('type', 'password')
+            passwordEye.classList.add("fa-eye-slash")
+            passwordEye.classList.remove("fa-eye")
+            c = 1
+        } else {
+            password.setAttribute('type', 'text')
+            passwordEye.classList.add("fa-eye")
+            passwordEye.classList.remove("fa-eye-slash")
+            c = 0
+        }
+
+    })
+
+    password.addEventListener('input', () => {
+        if (password.value.length == 0) {
+            charPass.style.backgroundColor = 'rgb(218, 214, 214)'
+            charPass.style.color = 'rgb(185, 185, 185)'
+            specialCharPass.style.backgroundColor = 'rgb(218, 214, 214)'
+            specialCharPass.style.color = 'rgb(185, 185, 185'
+            upperCasePass.style.backgroundColor = 'rgb(218, 214, 214)'
+            upperCasePass.style.color = 'rgb(185, 185, 185)'
+            numericPass.style.backgroundColor = 'rgb(218, 214, 214)'
+            numericPass.style.color = 'rgb(185, 185, 185)'
+        }
+
+        if (password.value.length >= 8) {
+            charPass.style.backgroundColor = 'green'
+            charPass.style.color = 'white'
+        } else {
+            charPass.style.backgroundColor = 'rgb(218, 214, 214)'
+            charPass.style.color = 'rgb(185, 185, 185)'
+        }
+        let s = 0
+        let u = 0
+        let n = 0
+        for (let i = 0; i < password.value.length; i++) {
+
+            if (/[!-*@^%]/.test(password.value[i])) {
+                s++
+            }
+            if (s > 0) {
+                specialCharPass.style.backgroundColor = 'green'
+                specialCharPass.style.color = 'white'
+            } else {
+                specialCharPass.style.backgroundColor = 'rgb(218, 214, 214)'
+                specialCharPass.style.color = 'rgb(185, 185, 185)'
+            }
+
+            if (/[A-Z]/.test(password.value[i])) {
+                u++
+            }
+            if (u > 0) {
+                upperCasePass.style.backgroundColor = 'green'
+                upperCasePass.style.color = 'white'
+            } else {
+                upperCasePass.style.backgroundColor = 'rgb(218, 214, 214)'
+                upperCasePass.style.color = 'rgb(185, 185, 185)'
+            }
+            if (/[0-9]/.test(password.value[i])) {
+                n++
+            }
+            if (n > 0) {
+                numericPass.style.backgroundColor = 'green'
+                numericPass.style.color = 'white'
+            } else {
+                numericPass.style.backgroundColor = 'rgb(218, 214, 214)'
+                numericPass.style.color = 'rgb(185, 185, 185)'
+            }
+        }
+
+    })
+
+
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        let s = 0
+        let u = 0
+        let n = 0
+        for (let i = 0; i < password.value.length; i++) {
+            if (/[0-9]/.test(password.value[i])) {
+                n++
+            }
+            if (/[A-Z]/.test(password.value[i])) {
+                u++
+            }
+            if (/[!-*@^%]/.test(password.value[i])) {
+                s++
+            }
+        }
+        if (s == 0) {
+            alert('Password should contain one special character')
+        }
+        else if (u == 0) {
+            alert('Password should contain one Uppercase letter')
+
+        }
+        else if (n == 0) {
+            alert('Password should contain one numeric value')
+        }
+
+        else {
+            let gen = 0
+            for (let j = 0; j < gender.length; j++) {
+                if (gender[j].checked) {
+                    gen = gender[j].value
+                }
+            }
+
+
+
+
+            let loginCredential = {
+                email: email.value,
+                password: password.value,
+                fullName: fullName.value,
+                mobileNumber: mobileNumber.innerText,
+                gender: gen,
+                alternateMobileNumber: alternateMobileNumber.value,
+                hintAlternateNumber: hintAlternateNumber.value,
+                data: {
+                    wishlist: {},
+                    allProduct: {
+                        mensData: [
+                            {
+                                title: "Urbano Fashion",
+                                description: "Slim Tropical Printed Pure Cotton",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12377258/2020/9/11/ce1b7bcb-a65a-4eb0-a317-42ac02718f1e1599798741705UrbanoFashionPrintedMenRoundNeckDarkGreenT-Shirt1.jpg",
+
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: "T-shirt",
+                                Brand: "Roadster",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "Roadster",
+                                description: "Men Cotton Pure Cotton T-shirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1996777/2017/11/7/11510046815508-Roadster-Men-Black-Solid-Round-Neck-T-shirt-4011510046815294-1.jpg",
+                                MRP: 499,
+                                Discount: 50,
+                                Category: "T-shirt",
+                                Brand: "Puma",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "Roadster",
+                                description: "Men Cotton Pure Cotton T-shirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1072681/2020/1/20/9de2d7dc-e239-4327-b7d0-096c80ac3a121579503443912-Roadster-Men-Charcoal-Melange-Printed-Round-Neck-T-shirt-364-1.jpg",
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: "T-shirt",
+                                Brand: "Friskers",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "Dillinger",
+                                description: "Men Cotton Pure Cotton T-shirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2378362/2018/6/9/270e0a7e-365b-4640-9433-b269c60bf3061528527188563-Moda-Rapido-Men-Maroon-Printed-Round-Neck-T-shirt-3811528527-1.jpg",
+                                MRP: 999,
+                                Discount: 30,
+                                Category: "T-shirt",
+                                Brand: "Friskers",
+                                color: "red",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "Huetrap",
+                                description: "Men Cotton Pure Cotton T-shirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11067734/2019/12/10/34b589c2-80b9-4ad9-81ea-84333fbc46761575972548055-DILLINGER-Men-Tshirts-4071575972546110-1.jpg",
+                                MRP: 1299,
+                                Discount: 20,
+                                Category: "T-shirt",
+                                Brand: "WROGN",
+                                color: "white",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "Friskers",
+                                description: "Men Cotton Pure Cotton T-shirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/12/12/1aab2a18-6774-4f83-b292-fe301755a3351576102551329-1.jpg",
+                                MRP: 1099,
+                                Discount: 10,
+                                Category: "T-shirt",
+                                Brand: "Puma",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Men Pure Cotton Casual Shirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/1376577/2022/6/3/ea10ab6c-883e-437a-8780-ed87484393f81654235830793-Roadster-Men-Black--Grey-Checked-Casual-Sustainable-Shirt-42-1.jpg",
+                                MRP: 3652,
+                                Discount: 15,
+                                Category: "Shirts",
+                                Brand: "WROGN",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Men Pure Cotton Casual Shirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/2038071/2019/4/9/ace5c891-0717-485c-8080-9c37c5c759821554799993054-Roadster-Men-Black--White-Slim-Fit-Solid-Casual-Shirt-322155-1.jpg",
+                                MRP: 4561,
+                                Discount: 55,
+                                Category: "Shirts",
+                                Brand: "Friskers",
+                                color: "white",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Men Pure Cotton Casual Shirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14811424/2021/7/26/d5ffc4e7-f447-4df1-b417-9ac68372cd6e1627300540761-Campus-Sutra-Men-Shirts-6941627300540022-1.jpg",
+                                MRP: 7540,
+                                Discount: 30,
+                                Category: "Shirts",
+                                Brand: "Puma",
+                                color: "blue",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Men Pure Cotton Casual Shirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12131930/2020/8/4/1ae4ee7b-2b06-478c-8cbe-d230eaced36b1596547667996-WROGN-Men-Shirts-101596547666184-1.jpg",
+                                MRP: 9999,
+                                Discount: 10,
+                                Category: "Shirts",
+                                Brand: "WROGN",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Men Pure Cotton Casual Shirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/7488102/2019/8/22/8002a744-0dad-4dbb-9481-cf0090134c3b1566454086786-Dennis-Lingo-Men-Pink-Slim-Fit-Solid-Casual-Shirt-9891566454-1.jpg",
+                                MRP: 7852,
+                                Discount: 5,
+                                Category: "Shirts",
+                                Brand: "Roadster",
+                                color: "pink",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweatshirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20179238/2022/9/27/af1ecfe8-430c-4ed1-9b6b-02080257867a1664260062167RelaxedFitSweatshirt1.jpg",
+                                MRP: 1520,
+                                Discount: 20,
+                                Category: "Sweatshirts",
+                                Brand: "Puma",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweatshirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20221528/2022/9/29/500eb751-a2e3-402e-b5b7-30d485290a551664465419476CODEbyLifestyleBlackSweatshirtsCotton1.jpg",
+                                MRP: 4500,
+                                Discount: 32,
+                                Category: "Sweatshirts",
+                                Brand: "HERE&NOW",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweatshirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20239376/2022/9/30/a6e24aca-34da-4ac2-b785-47bc960bc7b21664558196365BossiniNavyBlueSweatshirtsCotton1.jpg",
+                                MRP: 4512,
+                                Discount: 12,
+                                Category: "Sweatshirts",
+                                Brand: "Friskers",
+                                color: "blue",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweatshirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17167624/2022/2/16/4fd1bb4d-1a36-480a-8d67-8e856018fe821644989650030JompersMenGreyGeometricPrintedKurta1.jpg",
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: "Sweatshirts",
+                                Brand: "Roadster",
+                                color: "grey",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweatshirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20220078/2022/9/29/e7157d4c-a951-487d-8653-64a6c0a7c9981664465471597LouisPhilippeGreySweatshirt1.jpg",
+                                MRP: 3211,
+                                Discount: 21,
+                                Category: "Sweatshirts",
+                                Brand: "Puma",
+                                color: "white",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweatshirt",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/11957012/2020/10/10/979c611e-632f-4470-8930-5a12869c8b0c1602313038659-Roadster-Men-Sweatshirts-9561602313037381-1.jpg",
+                                MRP: 10000,
+                                Discount: 10,
+                                Category: "Sweatshirts",
+                                Brand: "WROGN",
+                                color: "blue",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Kurtas",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/13987972/2021/6/11/a6b97878-55c5-46af-8bdf-83fe434242011623386065975DENNISONMenPureCottonBeigeSolidKurta1.jpg",
+                                MRP: 1000,
+                                Discount: 25,
+                                Category: "Kurtas",
+                                Brand: "Puma",
+                                color: "grey",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Kurtas",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17027012/2022/2/2/833e444b-27fa-4317-be0b-f5089cf83d1f1643814590550JompersMenGreenThreadWorkKurta1.jpg",
+                                MRP: 2546,
+                                Discount: 35,
+                                Category: "Kurtas",
+                                Brand: "Roadster",
+                                color: "green",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Kurtas",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/8704533/2021/1/27/693b8c4a-eb1c-4ae1-a28f-0eb3005f63cb1611725553311-House-of-Pataudi-Men-Pink-Chikankari-Embroidered-Straight-Ku-3.jpg",
+                                MRP: 5416,
+                                Discount: 36,
+                                Category: "Kurtas",
+                                Brand: "Puma",
+                                color: "pink",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Kurtas",
+                                image: "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/17167624/2022/2/16/4fd1bb4d-1a36-480a-8d67-8e856018fe821644989650030JompersMenGreyGeometricPrintedKurta1.jpg",
+                                MRP: 4500,
+                                Discount: 45,
+                                Category: "Kurtas",
+                                Brand: "HERE&NOW",
+                                color: 'white',
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Kurtas",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/7/5/1c8d36aa-d7a6-4598-a564-e236ddd64b301562320690270-1.jpg",
+                                MRP: 15525,
+                                Discount: 65,
+                                Category: "Kurtas",
+                                Brand: "Roadster",
+                                color: "golden",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Jacket",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/14296094/2021/12/17/112046e8-6656-43bc-9ade-7c3bb15f30c21639743459311-WROGN-Men-Coffee-Brown-Pure-Cotton-Tailored-Jacket-656163974-1.jpg",
+                                MRP: 10990,
+                                Discount: 85,
+                                Category: "Jackets",
+                                Brand: "WROGN",
+                                color: "brown",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Jacket",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/5388190/2018/10/10/b41b573c-aef3-49b7-9c66-d9c3e405731f1539159453468-Roadster-Men-Navy-Solid-Bomber-5071539159452506-1.jpg",
+                                MRP: 10449,
+                                Discount: 35,
+                                Category: "Jackets",
+                                Brand: "Roadster",
+                                color: "blue",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Jacket",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19869282/2022/9/9/d36fc130-e9be-4a5a-9a03-4ac1d01eb1111662725962144LouisPhilippeSportMenMulticolouredColourblockedCropBomberJac1.jpg",
+                                MRP: 2504,
+                                Discount: 15,
+                                Category: "Jackets",
+                                Brand: "Friskers",
+                                color: "blue",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Jacket",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/12288808/2020/10/14/7268d730-fc55-42b4-a84c-100c5b1f0bed1602675649664-Roadster-Men-Jackets-7551602675647705-1.jpg",
+                                MRP: 1584,
+                                Discount: 10,
+                                Category: "Jackets",
+                                Brand: "Puma",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Jacket",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/11/22/12ce20af-af98-49ef-ac25-a1b542c0936e1574443903530-1.jpg",
+                                MRP: 2630,
+                                Discount: 80,
+                                Category: "Jackets",
+                                Brand: "Roadster",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweater",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/18119252/2022/9/1/d94cdca6-858b-421d-b2fd-23ae2a7c0eb01662033765101-Kook-N-Keech-Men-Olive-Green-Pullover-3541662033764541-1.jpg",
+                                MRP: 10154,
+                                Discount: 95,
+                                Category: "Sweaters",
+                                Brand: "max",
+                                color: "green",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweater",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20442964/2022/10/18/67626ecf-aff0-4482-acab-00b4b3c7101f1666114309926CantabilMenGreenRibbedPullover1.jpg",
+                                MRP: 5214,
+                                Discount: 85,
+                                Category: "Sweaters",
+                                Brand: "WROGN",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweater",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15654428/2021/10/6/20733fdc-554a-4990-b80b-6046b4b0ea5b1633503401601-Computerised-Jacquard-Sweater-2231633503401076-1.jpg",
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: "Sweaters",
+                                Brand: "max",
+                                color: "blue",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweater",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15654416/2021/10/6/2baa3df0-7590-4fcc-b291-9d84a775caa61633502646677-Computerised-Jacquard-Sweater-381633502646109-1.jpg",
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: "Sweaters",
+                                Brand: "max",
+                                color: "white",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweater",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15131252/2021/11/26/f965589d-5852-45f8-a20e-3c64e03c2f331637928565477-WROGN-Men-Sweaters-7681637928564594-1.jpg",
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: "Sweaters",
+                                Brand: "Roadster",
+                                color: "green",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweater",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/5151906/2018/11/20/bcd841f3-78f5-4252-96dd-081bf37d31771542712008080-Roadster-Men-Grey-Self-Design-Pullover-3611542712007765-1.jpg",
+                                MRP: 14585,
+                                Discount: 55,
+                                Category: "Sweaters",
+                                Brand: "Puma",
+                                color: "grey",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Sweater",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/15131350/2021/11/26/c96761af-ea35-40a7-8479-3d129ef0286b1637921031372-WROGN-Men-Sweaters-1321637921030849-1.jpg",
+                                MRP: 11123,
+                                Discount: 45,
+                                Category: "Sweaters",
+                                Brand: "Roadster",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Blazer",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/18192442/2022/6/14/ea3c1166-72a3-44f9-a990-3f1f6a3031681655188534607-INVICTUS-Men-Blazers-9311655188533964-1.jpg",
+                                MRP: 2599,
+                                Discount: 5,
+                                Category: "Blazers",
+                                Brand: "WROGN",
+                                color: "blue",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Blazer",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/20294010/2022/10/6/5d3d8c8c-496d-40df-b3d0-f7be3a8466821665075795574Blazers1.jpg",
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: "Blazers",
+                                Brand: "max",
+                                color: "blue",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Blazer",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19456852/2022/8/29/b30748c7-c44f-4fce-bc07-26f22716c1361661774662895-Louis-Philippe-Sport-Men-Blazers-5181661774662314-1.jpg",
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: "Blazers",
+                                Brand: "max",
+                                color: "grey",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Blazer",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/19495064/2022/10/27/f5f37337-9e07-4c54-ac75-0938e57e62a61666860252422-The-Indian-Garage-Co-Men-Blazers-5111666860251899-1.jpg",
+                                MRP: 1259,
+                                Discount: 5,
+                                Category: "Blazers",
+                                Brand: "WROGN",
+                                color: "green",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Blazer",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/8397951/2019/3/8/69cc3d5e-ba1b-433b-8720-e7aebed3b84b1552038058859-Mast--Harbour-Men-Blue-Solid-Single-Breasted-Casual-Blazer-8-1.jpg",
+                                MRP: 1549,
+                                Discount: 5,
+                                Category: "Blazers",
+                                Brand: "WROGN",
+                                color: "blue",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                            {
+                                title: "",
+                                description: "Mens Blazer",
+                                image:
+                                    "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10313483/2019/12/11/8533b1c3-023b-4a9b-9073-0ab8dab09d071576038869737-Mast--Harbour-Men-Blazers-8621576038867198-1.jpg",
+                                MRP: 1041,
+                                Discount: 5,
+                                Category: "Blazers",
+                                Brand: "Roadster",
+                                color: "black",
+                                rating: 4.2,
+                                likes: "25k",
+                            },
+                        ]
+                        , womensData: [
+                            {
+                                title: 'KALINI',
+                                description: 'Women Yoke Design Kurta Set',
+                                image: ["https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/18652620/2022/8/26/4d5f7043-a460-42e5-b67a-b04d9c0bc7041661503606623-KALINI-Women-Beige-Floral-Yoke-Design-Kurta-with-Trousers--W-1.jpg",
+                                    "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/18652620/2022/8/26/15cd09f8-0b5d-4494-ae08-de5d1bc619801661503606603-KALINI-Women-Beige-Floral-Yoke-Design-Kurta-with-Trousers--W-2.jpg"],
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: 'Kurta Sets',
+                                Brand: 'KALINI',
+                                color: "Yellow",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: 'Ahalyaa',
+                                description: 'Women printed Kurta',
+                                image: ["https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/14951330/2022/2/16/e6b90907-a613-45e1-9b2e-988caaba36581645010770505-Ahalyaa-Women-Beige-Floral-Printed-Regular-Gotta-Patti-Kurta-1.jpg",
+                                    "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/14951330/2022/2/16/ccc5bd1a-5515-41b9-b1c5-14069b4958d91645010770483-Ahalyaa-Women-Beige-Floral-Printed-Regular-Gotta-Patti-Kurta-2.jpg"],
+                                MRP: 1599,
+                                Discount: 55,
+                                Category: 'Kurta Sets',
+                                Brand: 'Ahalyaa',
+                                color: "red",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: 'Biba',
+                                description: 'Women printed Kurta',
+                                image: ["https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15054584/2021/10/22/a3e4287d-8319-4271-b4d9-089cca69e5e91634901113705-Biba-Women-Red-Ethnic-Motifs-Printed-Regular-Kurta-with-Trou-1.jpg",
+                                    "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15054584/2021/10/22/66ee1226-064f-4d6b-922b-1c91a7c949921634901113590-Biba-Women-Red-Ethnic-Motifs-Printed-Regular-Kurta-with-Trou-7.jpg"],
+                                MRP: 1999,
+                                Discount: 55,
+                                Category: 'Kurta Sets',
+                                Brand: 'FASHOR',
+                                color: "red",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: 'FASHOR',
+                                description: 'Women printed Kurta',
+                                image: ["https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20381508/2022/10/13/a5f04a5a-8df6-455e-bc16-0d3ddc1625d71665649613242FASHORWomenPinkEthnicMotifsPrintedPleatedMirrorWorkKurtawith1.jpg",
+                                    "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20381508/2022/10/13/fde09e9c-55b6-4ea1-8e4c-ede326c800da1665649613230FASHORWomenPinkEthnicMotifsPrintedPleatedMirrorWorkKurtawith7.jpg"],
+                                MRP: 2499,
+                                Discount: 55,
+                                Category: 'Kurta Sets',
+                                Brand: 'FASHOR',
+                                color: "red",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Printed Sarees',
+                                image: ["https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16697006/2022/1/5/4672c4bf-8fe1-4523-91f4-ac08301573251641392147135KALINIWomenMaroonWovenDesign1.jpg",
+                                    "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/16697006/2022/1/5/08cffca6-f056-4edf-9625-45939d258d001641392147482KALINIWomenMaroonWovenDesign2.jpg"],
+                                MRP: 699,
+                                Discount: 55,
+                                Category: 'Sarees',
+                                Brand: 'KALINI',
+                                color: 'red',
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Printed Sarees',
+                                image: ["https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20282030/2022/10/5/7cf0f8c9-4d0e-4136-b524-c1e933fcf4cc1664989114154OrangeColouredSequinedEmbroideredGeorgetteSaree1.jpg",
+                                    "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20282030/2022/10/5/33c78dea-f20c-4353-b857-2e2afb8abf301664989114163OrangeColouredSequinedEmbroideredGeorgetteSaree6.jpg"],
+                                MRP: 1199,
+                                Discount: 55,
+                                Category: 'Sarees',
+                                Brand: 'Ahalyaa',
+                                color: "green",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Printed Sarees',
+                                image: ["https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15195736/2022/4/5/4dc201e5-ec81-458a-af30-c6e99a37691a1649158065149-Mitera-Red--Gold-Toned-Woven-Design-Bandhani-Saree-146164915-1.jpg",
+                                    "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15195736/2022/4/5/4dc201e5-ec81-458a-af30-c6e99a37691a1649158065149-Mitera-Red--Gold-Toned-Woven-Design-Bandhani-Saree-146164915-1.jpg"],
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: 'Sarees',
+                                Brand: 'FASHOR',
+                                color: 'black',
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Printed Sarees',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/13737536/2021/3/25/80e97816-4e30-43da-8cf4-cb7934f170451616652200670-Beige-Art-Silk-Sequin-Embroidered-Designer-Saree-71616166521-1.jpg',
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: 'Sarees',
+                                Brand: 'Pothys',
+                                color: 'pink',
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Solid Denim Jacket',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/12178126/2020/9/15/eabb703a-eb23-4142-8d01-afc86874e8051600157050697-Roadster-Women-Jackets-1321600157048335-1.jpg',
+                                MRP: 1599,
+                                Discount: 55,
+                                Category: 'Jacket',
+                                Brand: 'Rodster',
+                                color: "blue",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Solid Denim Jacket',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/9690835/2019/11/6/3f1565e7-bcd9-4f74-9d99-82f97241aa0e1573042510290-Mast--Harbour-Women-Jackets-9231573042508410-1.jpg',
+                                MRP: 1099,
+                                Discount: 55,
+                                Category: 'Jacket',
+                                Brand: 'Rodster',
+                                color: "black",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Solid Denim Jacket',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/14455416/2021/6/23/1f94e361-1c2e-4857-a6f2-5da226432a8f1624442399043-Leather-Retail-Women-Jackets-3671624442398237-1.jpg',
+                                MRP: 1399,
+                                Discount: 55,
+                                Category: 'Jacket',
+                                Brand: 'Leather Retail',
+                                color: "blue",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Solid Denim Jacket',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/12288112/2020/8/24/f6156d8a-0241-4f06-ae33-8b42abd51e5f1598260771946-SASSAFRAS-Women-Black-Solid-Bomber-1821598260769963-1.jpg',
+                                MRP: 1899,
+                                Discount: 55,
+                                Category: 'Jacket',
+                                Brand: 'Leather Retail',
+                                color: "black",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Womens Palazzos',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/11169314/2019/12/16/3e2f2fc8-e237-40be-a23a-008e745f67b31576491188164-TAG-7-Women-White--Black-Solid-Flared-Palazzos-8121576491186-1.jpg',
+                                MRP: 799,
+                                Discount: 55,
+                                Category: 'Palazzos',
+                                Brand: 'KALINI',
+                                color: "white",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Womens Palazzos',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15892934/2021/11/15/000f59e8-ce26-4998-bfc4-471ea8874ba21636960002051-HERENOW-Women-Palazzos-5321636960001285-3.jpg',
+                                MRP: 599,
+                                Discount: 55,
+                                Category: 'Palazzos',
+                                Brand: 'Rodster',
+                                color: "blue",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Womens Palazzos',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15160680/2021/9/25/8ba63ea2-20ea-4519-8cfb-f5390336fbbc1632553437033-HERENOW-Women-Palazzos-5471632553436382-1.jpg',
+                                MRP: 699,
+                                Discount: 55,
+                                Category: 'Palazzos',
+                                Brand: 'FASHOR',
+                                color: "blue",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Womens Palazzos',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15886760/2022/8/26/4d497275-2aee-4ff6-8c9f-ab39855abfd21661518582758ModaRapidoWomenBlueWhitePureCottonEthnicMotifsPrintWideLegPa2.jpg',
+                                MRP: 1299,
+                                Discount: 55,
+                                Category: 'Palazzos',
+                                Brand: 'Pothys',
+                                color: "blue",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Ethnics',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/11101422/2022/7/2/a0c5c7b8-2896-4350-91ec-d22b7ee96e081656746520586RustorangeWomenMaroonGreyPrintedA-LineDress1.jpg',
+                                MRP: 1399,
+                                Discount: 50,
+                                Category: 'ETHNIC DRESSES',
+                                Brand: 'KALINI',
+                                color: "red",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Ethnics',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/11101348/2022/7/14/83abd678-89b0-451d-97bb-a0685259dd3a1657776454339RustorangeBlackOrangeEthnicMotifsPrintedMaxiDress1.jpg',
+                                MRP: 1599,
+                                Discount: 45,
+                                Category: 'ETHNIC DRESSES',
+                                Brand: 'FASHOR',
+                                color: "black",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Ethnics',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/productimage/2019/6/10/027bc8c5-c343-49d4-bdc6-bb9687ef03ab1560139075957-1.jpg',
+                                MRP: 799,
+                                Discount: 60,
+                                Category: 'ETHNIC DRESSES',
+                                Brand: 'Ahalyaa',
+                                color: "blue",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Ethnics',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15258100/2022/1/31/643ec740-b9af-47af-b12b-02387719be091643607144359-Libas-Women-Green-Floral-Embroidered-Sequinned-Maxi-Dress-42-1.jpg',
+                                MRP: 1899,
+                                Discount: 45,
+                                Category: 'ETHNIC DRESSES',
+                                Brand: 'Pothys',
+                                color: "green",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Lehnga Choli',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/18743890/2022/6/15/f3551a70-3143-4caa-a5d0-a294527ba44f1655302193319FABPIXELBluePeach-ColouredEmbroideredSequinnedShiboriSemi-St1.jpg',
+                                MRP: 1799,
+                                Discount: 55,
+                                Category: 'Lehnga Choli',
+                                Brand: 'KALINI',
+                                color: "blue",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Lehnga Choli',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/17473662/2022/3/11/91473f89-0c4a-4324-b889-1a9a35e2bd961646973488804WHITEFIREWomenNavyBlueLehengaCholi2.jpg',
+                                MRP: 2999,
+                                Discount: 55,
+                                Category: 'Lehnga Choli',
+                                Brand: 'Pothys',
+                                color: "blue",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Lehnga Choli',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/13421482/2021/2/12/034889ee-144f-42fd-9032-97a38e0143601613106475168-panchhi-Women-Lehenga-Choli-9781613106472433-1.jpg',
+                                MRP: 2099,
+                                Discount: 55,
+                                Category: 'Lehnga Choli',
+                                Brand: 'FASHOR',
+                                color: "black",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Lehnga Choli',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/14357484/2022/2/28/ec5003ed-ff17-4be0-94fd-683d7dbc12831646052336942-EthnoVogue-Maroon-Embroidered-Thread-Work-Made-to-Measure-Le-1.jpg',
+                                MRP: 2499,
+                                Discount: 55,
+                                Category: 'Lehnga Choli',
+                                Brand: 'Ahalyaa',
+                                color: "red",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Tshirt',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15338610/2021/10/19/417cfca5-58e3-48ee-aa6a-d6013eb495321634646042615-DILLINGER-Women-Tshirts-7981634646042269-1.jpg',
+                                MRP: 299,
+                                Discount: 55,
+                                Category: 'Tshirt',
+                                Brand: 'KALINI',
+                                color: "green",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Tshirt',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2142770/2018/2/10/11518237940085-Roadster-Women-Grey-Printed-Round-Neck-T-shirt-7431518237939871-1.jpg',
+                                MRP: 599,
+                                Discount: 55,
+                                Category: 'Tshirt',
+                                Brand: 'FASHOR',
+                                color: "blue",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Tshirt',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/18739992/2022/9/20/da924aaf-7b3e-479f-aa9a-57ef63f574271663671500496-UNDER-ARMOUR-Women-Red-Graphic-Brand-Logo-Printed-Loose-T-sh-1.jpg',
+                                MRP: 799,
+                                Discount: 55,
+                                Category: 'Tshirt',
+                                Brand: 'Pothys',
+                                color: "red",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Tshirt',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/14140636/2021/8/10/21bdf82c-83d2-4c20-b5b2-a941ca184fad1628586029539-Moda-Rapido-Women-Tshirts-5141628586029165-1.jpg',
+                                MRP: 999,
+                                Discount: 55,
+                                Category: 'Tshirt',
+                                Brand: 'Pothys',
+                                color: "Yellow",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Sweatshirt',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/11991154/2020/9/17/94300220-f83e-4f31-8690-2227749d6f541600337894313-Roadster-Women-Sweatshirts-1031600337891884-1.jpg',
+                                MRP: 699,
+                                Discount: 55,
+                                Category: 'Sweatshirt',
+                                Brand: 'KALINI',
+                                color: "black",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Sweatshirt',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20073696/2022/9/28/0846c336-b7fb-4c4c-a254-b6166f61ce371664350651765-Nike-Sportswear-Phoenix-Fleece-Womens-Oversized-Pullover-Hoo-1.jpg',
+                                MRP: 599,
+                                Discount: 55,
+                                Category: 'Sweatshirt',
+                                Brand: 'FASHOR',
+                                color: "green",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Sweatshirt',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/18069238/2022/9/12/46ac57f9-6460-4dbd-a89c-4c7c875b55801662968949295-Levis-Women-Mustard-Yellow-Brand-Logo-Printed-Sweatshirt-134-1.jpg',
+                                MRP: 499,
+                                Discount: 55,
+                                Category: 'Sweatshirt',
+                                Brand: 'Ahalyaa',
+                                color: "yellow",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Sweatshirt',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/10641922/2020/11/18/275045d6-052a-4fff-b484-8dba468efbb41605695885900TokyoTalkiesWomenBlueSolidHoodedSweatshirt1.jpg',
+                                MRP: 599,
+                                Discount: 55,
+                                Category: 'Sweatshirt',
+                                Brand: 'Pothys',
+                                color: "blue",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Suit',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/19835200/2022/9/7/eafee31e-af5c-4d5c-b04e-330080473bc21662550433179PolyCottonPantSuit-NavyBlue5.jpg',
+                                MRP: 2399,
+                                Discount: 50,
+                                Category: 'Suit',
+                                Brand: 'KALINI',
+                                color: "black",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Suit',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/18796730/2022/6/20/6b959124-926c-4a07-86eb-374dde335be21655733722747ikichicWomenWhiteSolid2-PieceLaceSuits1.jpg',
+                                MRP: 4399,
+                                Discount: 57,
+                                Category: 'Suit',
+                                Brand: 'FASHOR',
+                                color: 'white',
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Suit',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/20592936/2022/11/3/5db52ceb-1876-4fec-91d9-1b03228b6a0a1667456850947Suits1.jpg',
+                                MRP: 3499,
+                                Discount: 58,
+                                Category: 'Suit',
+                                Brand: 'Ahalyaa',
+                                color: "green",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Suit',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/19273788/2022/7/27/a3ed9ed2-a57f-4387-abb7-705742cae3001658923519332Suits1.jpg',
+                                MRP: 3299,
+                                Discount: 30,
+                                Category: 'Suit',
+                                Brand: 'KALINI',
+                                color: "red",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Night Suits',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/productimage/2021/6/1/d2c2ac7a-372e-4541-95ce-3c158ad46dc71622541708255-1.jpg',
+                                MRP: 599,
+                                Discount: 40,
+                                Category: 'Night Suit',
+                                Brand: 'FASHOR',
+                                color: "red",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Night Suits',
+                                image: "https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/13093806/2020/12/17/255b587b-0ff5-422e-8ea8-e345c17133671608188501237-ETC-Women-Night-suits-3671608188498956-1.jpg",
+                                MRP: 699,
+                                Discount: 35,
+                                Category: 'Night Suit',
+                                Brand: 'Pothys',
+                                color: "red",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Night Suits',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/15190442/2021/8/18/5219eac1-5b5d-40e9-b9a2-fb58fbcbeb701629292232690SmartyPantswomenssilksatinbluecolordogpawprintnightsuit1.jpg',
+                                MRP: 999,
+                                Discount: 20,
+                                Category: 'Night Suit',
+                                Brand: 'Ahalyaa',
+                                color: "white",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+                            {
+                                title: '',
+                                description: 'Women Night Suits',
+                                image: 'https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/17281298/2022/3/7/5f0a25af-099d-41c2-a6bf-c9a83b9ded3b1646642431851-ETC-Women-Night-suits-1781646642431408-1.jpg',
+                                MRP: 1299,
+                                Discount: 46,
+                                Category: 'Night Suit',
+                                Brand: 'KALINI',
+                                color: "black",
+                                rating: 4.2,
+                                likes: '25k'
+                            },
+
+                        ]
+                    }
+                }
+            }
+
+            FCMasterData.push(loginCredential)
+            localStorage.setItem('FCmasterData', JSON.stringify(FCMasterData))
+            alert('Signed Up Succesfully,Kindly Log-in')
+
+            setTimeout(() => {
+                window.location.href = '../index.html'
+            }, 3000)
+
+        }
+
+
+
+
+
+
+
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

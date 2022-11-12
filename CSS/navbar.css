@@ -1,0 +1,278 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Cabin', sans-serif;;
+}
+
+nav {
+    display: flex;
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+        rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav>div {
+    height: 100%;
+    display: flex;
+}
+
+.downMenuContent {
+    position: absolute;
+    width: 200%;
+    top: 100%;
+    right: 5px;
+    left: -30px;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.downMenuContent>div:nth-child(even) {
+    background-color: rgb(238, 230, 230);
+    width: 17%;
+}
+
+#nav-mega>li {
+    padding: 32px 10px;
+}
+
+#nav-mega>li:hover .downMenuContent {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+#nav-mega>li:nth-child(6) .downMenuContent {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 5px;
+    left: 280px;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#nav-mega>li:nth-child(6) .downMenuContent * {
+    margin: 10px 0px;
+}
+
+#nav-mega>li:nth-child(6) .downMenuContent a {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 5px;
+    text-decoration: none;
+    color: grey;
+    padding: -5px 0px;
+    margin: 0px 10px;
+    font-size: 15px;
+
+
+}
+
+#nav-mega>li:nth-child(6) .downMenuContent>img:nth-child(1) {
+    width: 100px;
+
+}
+
+#nav-mega>li:nth-child(6) .downMenuContent>img:nth-child(3) {
+    width: 100%;
+}
+
+#nav-mega>li:nth-child(6):hover .downMenuContent {
+    opacity: 1;
+    visibility: visible;
+}
+
+#nav-mega>li:hover {
+    border-bottom: 5px solid black;
+    padding: 27px 0px 22px;
+
+}
+
+#logo {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-mega {
+    width: 40%;
+    justify-content: space-around;
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#logo>a>img {
+    width: 50%;
+}
+#logo>a{
+   display: flex;
+   justify-content: center;
+}
+
+#nav-mega>li>a {
+    text-decoration: none;
+    color: black;
+}
+
+#search {
+    width: 25%;
+    height: 43%;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(248, 244, 245, 0.704);
+
+}
+
+#search>input {
+    width: 90%;
+    outline: 0px;
+    height: 85%;
+    background-color: rgba(248, 244, 245, 0.704);
+    border:0px;
+
+
+}
+
+#search>i {
+    width: 10%;
+    text-align: center;
+}
+
+#cart {
+    width: 15%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 25px;
+    position: relative;
+}
+
+
+#cart>div {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0px;
+}
+
+#cart>div>* {
+    margin: 5px;
+}
+
+
+#men {
+    display: flex;
+    /* float: center; */
+}
+
+
+
+#nav-mega li {
+    list-style: none;
+}
+
+.menuCol {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    /* flex-direction: column; */
+}
+
+.menuCol ul li {
+    padding: 5px;
+    text-align: left;
+
+}
+
+.menuHead {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.downMenuContent .menuHead:hover {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.downMenuContent li {
+    font-size: 14px;
+    color-scheme: grey;
+}
+
+.downMenuContent li:hover {
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+}
+
+#cart>div .downMenuContent {
+    padding: 20px;
+    right: 150px;
+    width: 140%;
+    left: -150px;
+}
+
+#cart>div .downMenuContent li {
+    margin: 10px 5px;
+
+    font-size: 14px;
+    list-style: none;
+}
+
+#cart>div .downMenuContent li:hover {
+    font-size: 15px;
+
+}
+
+
+#cart>div:hover .downMenuContent {
+    opacity: 1;
+    visibility: visible;
+}
+
+#align {
+    text-align: left;
+}
+
+#loginbtn {
+    /* margin: 20px; */
+    width: 80%;
+    padding: 5px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid pink;
+    text-align: center;
+}
+
+a{
+text-decoration: none;
+/* color: black; */
+}
