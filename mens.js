@@ -105,7 +105,7 @@ let menHeading = [
   "BIGGEST DEALS ON TOP BRANDS",
   "CATEGORIES TO BAG",
   "EXPLORE TOP BRANDS",
-  "MYNTRA LUXE",
+  "FASHION COMPANY LUXE",
   "TRENDING IN INDIAN WEAR",
   "TRENDING IN SPORTS WEAR",
   "TRENDING IN FOOTWEAR",
@@ -131,7 +131,7 @@ for(let key in menImage){
     h4.innerText=menHeading[objH4_count]
     objH4_count++
 allMarketing.append(h4)
-display(menImage[key],'link',allMarketing)
+display(menImage[key],'/products/mensProduct.html',allMarketing)
 }
 
 

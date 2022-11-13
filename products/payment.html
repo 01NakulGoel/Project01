@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cabin', sans-serif;
+
+        }
+
+        #nav {
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+        }
+
+        #nav li {
+            list-style: none;
+            margin: 0px 5px;
+        }
+
+        #nav img {
+            height: 100%;
+        }
+
+        #nav div {
+            padding: 10px 0px;
+        }
+
+        #nav>div:nth-child(2) {
+            display: flex;
+            align-items: center;
+        }
+
+        #nav>div>ul {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        #payment {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            border: 1px solid grey;
+            min-height: 300px;
+        }
+
+        #menu {
+            width: 40%;
+            background-color: grey;
+
+        }
+
+
+        #paymentoptions {
+            width: 60%;
+            padding: 20px;
+        }
+
+        #menu>div {
+            min-height: 40px;
+            background-color: rgb(189, 187, 187);
+            border: 1px solid grey;
+            display: flex;
+
+            align-items: center;
+        }
+
+        #menu>div>* {
+            margin-left: 10px;
+
+        }
+
+        #main {
+            display: flex;
+            width: 70%;
+            margin: auto;
+            border: 1px solid grey;
+
+        }
+
+        #main>div:nth-child(1) {
+            width: 65%;
+        }
+
+        #totalAmount {
+            width: 30%;
+        }
+
+        #totalAmount>div {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin: 5px;
+        }
+
+        #form form input[type='submit'] {
+            color: white;
+            height: 40px;
+            letter-spacing: 1px;
+            background-color: rgb(250, 80, 108);
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+
+        }
+
+
+
+        #paymentoptions>button:hover {
+            cursor: pointer;
+            background-color: rgb(253, 165, 182);
+
+
+        }
+
+        #paymentoptions>button {
+            width: 100%;
+            color: white;
+            height: 40px;
+            letter-spacing: 1px;
+            background-color: rgb(250, 80, 108);
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            border: none;
+        }
+
+        #main {
+            margin-top: 30px;
+        }
+
+        footer>div {
+            width: 80%;
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+            align-items: center;
+            height: 40px;
+            padding: 5px 5px;
+        }
+
+        footer {
+            border-top: 1px solid grey;
+        }
+
+        footer>div>div {
+            height: 40px;
+        }
+
+        footer>div img {
+            height: 100%;
+        }
+
+        footer>div a {
+            color: black;
+            text-decoration: none;
+        }
+
+        footer>div>div:nth-child(2) {
+            padding-top: 20px;
+
+        }
+
+        #totalAmount>div:last-child a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+    <title>PAYMENT</title>
+</head>
+
+<body>
+    <nav id="nav">
+        <div><img src="/logo.png" alt="logo"> </div>
+        <div>
+            <ul>
+                <li class="step step1">BAG</li>
+                <li>------</li>
+                <li class="step step3">ADDRESS</li>
+                <li>------</li>
+                <li class="step step2" style="color: #20BD99;"> <u>PAYMENT</u> </li>
+            </ul>
+        </div>
+        <div>
+            <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="">
+            <span>100% Secure</span>
+        </div>
+    </nav>
+    <div id="main">
+
+        <div>
+
+            <div id="payment">
+
+                <div id="menu">
+                    <div>
+                        <p>
+                            <i class="fa-solid fa-money-bill-1"></i> Cash on delivery (cash/UPI)
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <i class="fa-solid fa-credit-card"></i> Credit/Debit card
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <i class="fa-solid fa-wallet"></i> Phone Pe /Google Pay/ BHIM UPI
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <i class="fa-solid fa-wallet"></i> Paytm/Wallets
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <i class="fa-solid fa-building-columns"></i> Net Banking
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <i class="fa-solid fa-e"></i> EMI/Pay Later
+                        </p>
+                    </div>
+                </div>
+                <div id="paymentoptions">
+                    <h4>Pay On Delivery (Cash/UPI)</h4>
+                    <P>
+                        You can pay via Cash or UPI enabled app at the time of delivery. Ask your delivery executive for
+                        these options.
+                    </P>
+                    <button id="placeOrder">PLACE ORDER</button>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div id="totalAmount">
+            <div><b> Total Price <span class="count">()</span>items</b></div>
+            <div>
+                <span>Total MRP</span><span class="totalMRP">1</span>
+            </div>
+            <div>
+                <span>Total Discount</span><span class="totalDiscount">1</span>
+            </div>
+            <div>
+                <span>Coupon Discount</span><span>Apply Coupon</span>
+            </div>
+            <div>
+                <span>Convienece Fee</span><span style="color:rgb(5, 214, 5)"><s style="color:black ;">Rs99</s> FREE
+                </span>
+            </div>
+            <hr>
+            <div>
+                <span><b>Total Amount</b> </span>
+                <span class="totalPrice">1</span>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <footer>
+        <div>
+            <div>
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png" alt="">
+            </div>
+            <div>
+                <a href="">
+                    <span>Need Help ? Contact Us</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
+<script>
+
+    document.querySelector('#placeOrder').addEventListener('click', () => {
+
+        window.location.href = '/products/paymentOtp.html'
+
+
+
+    })
+
+
+    let loggedIn = JSON.parse(localStorage.getItem('loggedIn'))
+    let price = loggedIn.data.cartPrice
+    document.querySelector('.count').innerText = `(${price[0]})`
+    document.querySelector('.totalMRP').innerText = `Rs. ${price[1]}`
+    document.querySelector('.totalPrice').innerText = `Rs. ${price[2]}`
+    document.querySelector('.totalDiscount').innerText = `${price[3]}% OFF`
+
+
+
+
+
+
+
+</script>

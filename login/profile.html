@@ -5,20 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Company</title>
-    
-    <link rel="stylesheet" href="style.css">
+    <title id="title">Profile user</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/CSS/navbar.css">
     <link rel="stylesheet" href="/CSS/footer.css">
-    <link rel="stylesheet" href="/CSS/slideShow.css">
+
+    <style>
+        .profileInfo {
+            width: 60%;
+            margin: auto;
+            height: 500px;
+            background-color: rgba(201, 201, 201, 0.87);
+            margin-top: 50px;
+            text-align: left;
+            padding-left: 20px;
+        }
+        h1{
+            width: 100%;
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+
 </head>
 
 <body>
     <nav>
-        <div id="logo"> <a href="/index.html"> <img src="/logo.png" alt="">  </a>  </div>
+        <div id="logo"> <a href="/index.html"> <img src="/logo.png" alt=""> </a> </div>
         <div id="nav-mega">
             <li><a href="/men.html">MEN</a>
                 <div class="downMenuContent">
@@ -174,7 +190,7 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li class="menuHead">  Maternity  </li>
+                            <li class="menuHead"> Maternity </li>
                             <li class="menuHead"> <a> Sunglasses & Frames </a> </li>
                             <li class="menuHead"> <a> Footwear </a> </li>
                             <li> <a> Flats </a> </li>
@@ -573,13 +589,15 @@
         <div id="cart">
             <div>
                 <i class="fa-regular fa-user"></i>
-                <span> <a href="" style="color:black;"> Profile  </a> </span>
+                <span> <a href="" style="color:black;"> Profile </a> </span>
                 <div class="downMenuContent">
                     <div class="menCol" id="align">
                         <ul>
                             <li> Welcome</li>
                             <li> To access account and manage orders</li>
-                          <a href="/login/login.html">    <li id="loginbtn">   LOGIN / SIGNUP</li> </a> 
+                            <a href="/login/login.html">
+                                <li id="loginbtn"> LOGIN / SIGNUP</li>
+                            </a>
                             <hr>
                             <li>Orders</li>
                             <li> Wishlist</li>
@@ -599,7 +617,7 @@
             </div>
             <div>
                 <i class="fa-regular fa-heart"></i>
-                <span> <a href="/products/wishlist.html" style="color:black;"> Wishlist  </a> </span>
+                <span> <a href="/products/wishlist.html" style="color:black;"> Wishlist </a> </span>
             </div>
             <div>
                 <i class="fa-solid fa-bag-shopping"></i>
@@ -608,16 +626,49 @@
 
         </div>
     </nav>
+    <h1>USER PROFILE</h1>
+    <div id="profile">
+        <table class="profileInfo">
+            <tbody>
+                <tr>
+                    <td>Full Name</td>
+                    <td id="name">Nakul Goel</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td id="number">96433765</td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td id="email">nakulgoyal78@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td id="gender">MALE</td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>- not added -</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>- not added -</td>
+                </tr>
+                <tr>
+                    <td>Alternate Mobile</td>
+                    <td id="alternateNumber">- not added -</td>
+                </tr>
+                <tr>
+                    <td>Hint Name</td>
+                    <td>- not added -</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <div>
-        <div id="slide1"> </div>
-        <div id="slideBtn"></div>
+
+
     </div>
-    <section id="slideShow">
 
-    </section>
-    <section id="allMarketing">
-    </section>
     <footer>
         <div id="footerMenu">
             <div>
@@ -888,7 +939,8 @@
         </div>
         <div class="footer-80" id="footerContact">
             <div>
-                <p style="color: grey">In case of any concern,<a href="" style="text-decoration: none; color:black;">  <b>  Contact Us    </b>      </a> 
+                <p style="color: grey">In case of any concern,<a href="" style="text-decoration: none; color:black;">
+                        <b> Contact Us </b> </a>
                 </p>
             </div>
             <div>
@@ -899,16 +951,19 @@
             <hr>
             <h3 class="footerHead">MEN’S SHOPPING AT FASHION COMPANY : A SUPERIOR EXPERIENCE
             </h3>
-            <p>Fashion Company is one of the best sites when it comes to online shopping for men. The finest of material,
+            <p>Fashion Company is one of the best sites when it comes to online shopping for men. The finest of
+                material,
                 superior
                 design and unbeatable style go into the making of our men’s shopping collection. Our range of online
                 shopping men’s wear, accessories, footwear and personal care products are second to none. Compared with
-                other men’s shopping sites, Fashion Company brings you the best price products which won’t hurt your pocket. With
+                other men’s shopping sites, Fashion Company brings you the best price products which won’t hurt your
+                pocket. With
                 seasonal discounts on trendy casual wear, suits, blazers, sneakers and more, online shopping for men at
                 Fashion Company just gets even more irresistible!</p>
             <h3 class="footerHead">ONLINE SHOPPING FOR MEN: OPTIONS UNLIMITED</h3>
             <p>
-                At Fashion Company, our online shopping fashion for men collection features plenty of options to create multiple
+                At Fashion Company, our online shopping fashion for men collection features plenty of options to create
+                multiple
                 outfits. At our men’s online shop we have brought together an exhaustive range of products from the best
                 men’s brands. Here is a list of must-haves from the wide variety of awesome products at Fashion Company:
             </p>
@@ -968,10 +1023,22 @@
             </p>
         </div>
     </footer>
-  
+
 
 </body>
 
 </html>
-<script src="/assets.js"></script>
-<script src="/js/userlogin.js"></script>
+
+
+
+<script>
+    let loggedIn = JSON.parse(localStorage.getItem('loggedIn'))
+
+    document.querySelector('#name').innerText = loggedIn.fullName
+    document.querySelector('#title').innerText = loggedIn.fullName
+    document.querySelector('#number').innerText = loggedIn.mobileNumber
+    document.querySelector('#email').innerText = loggedIn.email
+    document.querySelector('#gender').innerText = loggedIn.gender
+    document.querySelector('#alternateNumber').innerText = loggedIn.alternateMobileNumber
+
+</script>

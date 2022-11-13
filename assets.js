@@ -379,15 +379,15 @@ trendingOutfitsByInfluencers
 }
  let objH4=[
     'DEAL OF THE DAY',
-   'BEST OF MYNTRA EXCLUSIVE BRANDS',
+   'BEST OF FASHION COMPANY EXCLUSIVE BRANDS',
     'TOP PICKS',
     'CATEGORIES TO BAG',
    'DEALS ON TOP BRANDS',
    'BRANDS AT SLASHED PRICES',
     'BEST BUYS ',
-    'MYNTRA LUKE ',
+    'FASHION COMPANY LUKE ',
    'GIFTING CARDS',
-   'SPRING SUMMER 2022- FIRST ON MYNTRA',
+   'SPRING SUMMER 2022- FIRST ON FASHION COMPANY',
    'STYLECAST HOTTEST FINDS',
     'TRENDS FOR HER',
     'TRENDS FOR HIM ',
@@ -472,14 +472,4 @@ slideShow.forEach((image, i) => {
 
 
 
-
-let loginbtn=document.querySelector('#loginbtn')
-
-let loggedIn=JSON.parse(localStorage.getItem('loggedIn'))||{}
-
-console.log(loggedIn)
-if(loggedIn.fullName!=undefined){
-    loginbtn.innerText=`Hello ${loggedIn.fullName}`
-    loginbtn.parentElement.setAttribute('href','/index.html')
-}
 

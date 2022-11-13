@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav {
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    }
+
+    #nav li {
+        list-style: none;
+        margin: 0px 5px;
+    }
+
+    #nav img {
+        height: 100%;
+    }
+
+    #nav div {
+        padding: 10px 0px;
+    }
+
+    #nav>div:nth-child(2) {
+        display: flex;
+        align-items: center;
+    }
+
+    #nav>div>ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    #main {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        margin: 20px auto;
+
+    }
+
+    #main>div>div {
+        margin: 10px 0px;
+    }
+
+    #main>#first {
+        width: 65%;
+    }
+
+    #main>#second {
+        width: 32%;
+    }
+
+    #first>div {
+        min-height: 60px;
+        border: 1px solid grey;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    }
+
+    #first .two {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #main button {
+        height: 30px;
+        font-size: 15px;
+        color: rgb(250, 80, 108);
+        background-color: white;
+        border: 1px solid rgb(250, 80, 108);
+        padding: 0px 10px;
+    }
+
+    #second>div {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        min-height: 60px;
+        border: 1px solid grey;
+        padding: 10px 20px;
+
+    }
+
+    .pink {
+        color: rgb(250, 80, 108);
+    }
+
+    #second>div:nth-child(1)>div:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+
+    #products>div {
+        display: flex;
+        height: 200px;
+        overflow: hidden;
+        margin: 5px;
+        border: 1px solid grey;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        width: 158%;
+    }
+
+    #products>div>div {
+        padding: 5px;
+    }
+
+    #products>div>div:nth-child(2) {
+        width: 70%;
+    }
+
+    #products>div>div:nth-child(2) * {
+        margin: 5px;
+    }
+
+    #products>div img {
+        object-fit: scale-down;
+        height: 100%;
+    }
+
+    #second>div:nth-child(3) {
+        color: black;
+    }
+
+    #totalAmount>div {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 5px;
+    }
+
+    #totalAmount>div:last-child {
+        width: 100%;
+        color: white;
+        height: 40px;
+        letter-spacing: 1px;
+        background-color: rgb(250, 80, 108);
+        align-items: center;
+        justify-content: center;
+
+
+        margin-top: 30px;
+
+    }
+
+    #totalAmount>div:last-child a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #priceDetails p {
+        font-size: 13px;
+        margin: 5px 0px;
+        color: grey;
+    }
+
+    #priceDetails img {
+        object-fit: scale-down;
+        width: 100%;
+    }
+
+    #main i {
+        color: red;
+        font-size: 20px;
+    }
+
+    footer>div {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        align-items: center;
+        height: 40px;
+        padding: 5px 5px;
+    }
+
+    footer {
+        border-top: 1px solid grey;
+    }
+
+    footer>div>div {
+        height: 40px;
+    }
+
+    footer>div img {
+        height: 100%;
+    }
+
+    footer>div a {
+        color: black;
+        text-decoration: none;
+    }
+
+    footer>div>div:nth-child(2) {
+        padding-top: 20px;
+
+    }
+</style>
+
+<body>
+    <nav id="nav">
+        <div><img src="/logo.png" alt="logo"> </div>
+        <div>
+            <ul>
+                <li class="step step1">BAG</li>
+                <li>------</li>
+                <li class="step step2">ADDRESS</li>
+                <li>------</li>
+                <li class="step step3">PAYMENT</li>
+            </ul>
+        </div>
+        <div>
+            <img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="">
+        </div>
+    </nav>
+
+    <div id="main">
+
+        <div id="first">
+            <div class="one">
+                <p><b> Check delivery time and services</b> </p>
+                <div><button id="pincode">ENTER PIN CODE</button></div>
+            </div>
+            <div class="two">
+                <p> <i class="fa-solid fa-money-bill"></i> <b>Available Offers </b> </p>
+                <div>
+                    <ul>
+                        <li>10% Instant Discount on ICICI Bank Credit Cards on a min spend of Rs 4,000. TCA</li>
+                    </ul>
+                </div>
+                <div id="showMore">
+                    <p class="pink">Show More <i class="fa-solid fa-angle-down"></i></p>
+                </div>
+            </div>
+            <div class="three">
+                <p><i class="fa-solid fa-truck"></i> Yay! <b>No convenience fee</b> on this order</p>
+            </div>
+            <div class="four">
+                <div>
+                    <input type="checkbox" name="" id=""> <span>Items Selected</span>
+
+                </div>
+                <div>
+                    <button id="remove">REMOVE</button><span> | </span> <button id="moveToWishlist">MOVE TO
+                        WISHLIST</button>
+                </div>
+            </div>
+            <div class="five">
+
+                <div id="products">
+
+                </div>
+
+            </div>
+            <div class="six">
+                <div>
+                    <p>
+                        <i class="fa-regular fa-clipboard"></i> Add More From Wishlist
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-greater-than"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="second">
+            <div>
+                <div>COUPONS</div>
+                <div>
+                    <p><i class="fa-solid fa-tag"></i> <b>Apply Coupons</b></p>
+                    <div> <button>APPLY</button>
+                    </div>
+                </div>
+            </div>
+            <div id="priceDetails">
+                <p>GIFTING & PERSONALISATION</p>
+                <img src="/Gifting and personalisation.png" alt="">
+
+
+            </div>
+            <div id="totalAmount">
+                <div><b> Total Price <span class="count">()</span>items</b></div>
+                <div>
+                    <span>Total MRP</span><span class="totalMRP">1</span>
+                </div>
+                <div>
+                    <span>Total Discount</span><span class="totalDiscount">1</span>
+                </div>
+                <div>
+                    <span>Coupon Discount</span><span>Apply Coupon</span>
+                </div>
+                <div>
+                    <span>Convienece Fee</span><span style="color:rgb(5, 214, 5)"><s style="color:black ;">Rs99</s> FREE
+                    </span>
+                </div>
+                <hr>
+                <div>
+                    <span><b>Total Amount</b> </span>
+                    <span class="totalPrice">1</span>
+                </div>
+                <div id="placeOrder"> <a href="/products/address.html"> PLACE ORDER </a> </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div>
+            <div>
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ssl.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-visa.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-mc.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-ae.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-dc.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-nb.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-cod.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-rupay.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-paypal.png" alt="">
+                <img src="https://constant.myntassets.com/checkout/assets/img/footer-bank-bhim.png" alt="">
+            </div>
+            <div>
+                <a href="">
+                    <span>Need Help ? Contact Us</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
+
+
+
+
+<script>
+    let offers = [
+        '5% Unlimited Cashback on Flipkart Axis Bank Credit Card. TCA',
+        '10% Cashback upto Rs 100 on Ola Money Postpaid or Wallet transaction on a min spend of Rs 1000 . TCA',
+        '10% Cashback upto Rs 150 on Freecharge Paylater transaction. TCA',
+        'Upto Rs 750 Cashback on Mobikwik Wallet Transactions on a min spend of Rs 2,000.Use code MBK750 on Mobikwik.TCA',
+        '5% Cashback upto Rs 75 on a minimum spend of Rs 1,500 with PayZapp. TCA'
+    ]
+
+    let loggedIn = JSON.parse(localStorage.getItem('loggedIn')) || []
+    let products = document.querySelector('#products')
+    let cartItems = loggedIn.data.cart
+    console.log(cartItems)
+    function displayProducts(arr) {
+
+
+        arr.forEach((elem, i) => {
+            let div = document.createElement('div')
+            let img = document.createElement('img')
+            let brand = document.createElement('p')
+            let desc = document.createElement('p')
+            let div1 = document.createElement('div')
+            let div2 = document.createElement('div')
+            let qtyPrice = document.createElement('div')
+            let qty = document.createElement('select')
+            let size = document.createElement('select')
+            qty.classList.add('qty')
+            qty.innerHTML = `<option value="1">Qty:1</option>
+                              <option value="2">Qty:2</option>
+                              <option value="3">Qty:3</option>
+                              <option value="4">Qty:4</option>
+                              <option value="5">Qty:5</option>`
+            size.innerHTML = `<option value="S">Size:S</option>
+                              <option value="M">Size:M</option>
+                              <option value="L">Size:L</option>
+                              <option value="XL">Size:XL</option>
+                              <option value="XXL">Size:XXL</option>`
+
+
+
+
+            let price = document.createElement('p')
+            let discountedPrice = Math.floor((elem.MRP * elem.Discount) / 100)
+            price.innerHTML = `Rs. ${discountedPrice} <s style='color:grey'> Rs. ${elem.MRP}</s> <span class='pink'>${elem.Discount} % OFF</span>`
+            qtyPrice.append(qty, size)
+            img.src = elem.image
+            brand.innerText = elem.Brand
+            desc.innerText = elem.description
+            div2.append(brand, desc, qtyPrice, price)
+            div1.append(img)
+            div.append(div1, div2)
+            products.append(div)
+            qty.addEventListener('change', () => {
+                console.log(qty.value)
+                price.innerHTML = `Rs. ${discountedPrice * qty.value} <s style='color:grey'> Rs. ${elem.MRP * qty.value}</s> <span class='pink'>${elem.Discount} % OFF</span>`
+                calculatePrice(qty1, cartItems)
+            })
+
+        })
+
+    }
+    displayProducts(cartItems)
+
+
+
+    let priceDetails = document.querySelector('#priceDetails')
+
+    let qty1 = document.querySelectorAll('.qty')
+
+    console.log(qty1)
+    function calculatePrice(qty1, cartItems) {
+        let totalprice = 0
+        let totalMRP = 0
+
+        for (let i = 0; i < qty1.length; i++) {
+
+            console.log(totalprice)
+            totalprice += (Math.floor((cartItems[i].MRP * cartItems[i].Discount) / 100)) * (Number(qty1[i].value))
+            totalMRP += cartItems[i].MRP * qty1[i].value
+
+        }
+        console.log(totalprice, totalMRP)
+        loggedIn.data.cartPrice=[qty1.length,totalMRP,totalprice,Math.floor(((totalMRP - totalprice) * 100) / totalMRP)]
+        localStorage.setItem('loggedIn',JSON.stringify(loggedIn))
+        document.querySelector('.count').innerText = `(${qty1.length})`
+        document.querySelector('.totalMRP').innerText = `Rs. ${totalMRP}`
+        document.querySelector('.totalPrice').innerText = `Rs. ${totalprice}`
+        document.querySelector('.totalDiscount').innerText = `${Math.floor(((totalMRP - totalprice) * 100) / totalMRP)}% OFF`
+
+    }
+    calculatePrice(qty1, cartItems)
+</script>

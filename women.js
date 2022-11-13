@@ -136,7 +136,7 @@ for(let key in womenImage){
     h4.innerText=womenHeading[objH4_count]
     objH4_count++
 allMarketing.append(h4)
-display(womenImage[key],'link',allMarketing)
+display(womenImage[key],'/products/womensProduct.html',allMarketing)
 }
 
 
