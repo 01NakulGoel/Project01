@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="/CSS/footer.css">
 
     <style>
+        .btncart {
+            width: 100%;
+            height: 37px;
+            background-color: white;
+            border: 1px solid rgb(250, 80, 108);
+            color: rgb(250, 80, 108);
+            font-weight: bold;
+            margin: top 2px; ;
+            border-radius: 5px;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -26,7 +37,7 @@
         #wishlist * {
             margin: 20px 0px;
         }
-
+ 
         #wishlist>h3 {
             font-size: 30px;
             color: rgb(7, 204, 204);
@@ -64,6 +75,7 @@
             font-size: 21px;
             cursor: pointer;
         }
+
         #products {
             width: 100%;
             /* border: 5px solid orange; */
@@ -71,24 +83,28 @@
             justify-content: space-around;
             flex-wrap: wrap;
         }
+        #products>div *{
+            margin-top: 4px;
+        }
 
         #products>div {
             height: 350px;
             margin: 20px 0px;
-            width: 17%;
+           
         }
-         
-        
 
 
-         #products>div img{
-            width: 100%;
+
+
+        #products>div img {
             height: 280px;
-          
-         }
+
+        }
+
         #product p {
             margin: 5px 0px
         }
+
         .addToWishlist {
             text-align: center;
             width: 95%;
@@ -108,7 +124,7 @@
             color: white;
             height: 30px;
             position: absolute;
-            margin-top: -50px;
+            margin-top: -50px !important;
             margin-left: 10px;
             width: 100px;
             letter-spacing: 2px;
@@ -116,14 +132,13 @@
             align-items: center;
             justify-content: center;
         }
-
     </style>
 
 </head>
 
 <body>
     <nav>
-        <div id="logo"> <a href="/index.html"> <img src="/logo.png" alt="">  </a>  </div>
+        <div id="logo"> <a href="/index.html"> <img src="/logo.png" alt=""> </a> </div>
         <div id="nav-mega">
             <li><a href="/men.html">MEN</a>
                 <div class="downMenuContent">
@@ -279,7 +294,7 @@
                     </div>
                     <div class="menuCol">
                         <ul>
-                            <li class="menuHead">  Maternity  </li>
+                            <li class="menuHead"> Maternity </li>
                             <li class="menuHead"> <a> Sunglasses & Frames </a> </li>
                             <li class="menuHead"> <a> Footwear </a> </li>
                             <li> <a> Flats </a> </li>
@@ -678,13 +693,15 @@
         <div id="cart">
             <div>
                 <i class="fa-regular fa-user"></i>
-                <span> <a href="" style="color:black;"> Profile  </a> </span>
+                <span> <a href="" style="color:black;"> Profile </a> </span>
                 <div class="downMenuContent">
                     <div class="menCol" id="align">
                         <ul>
                             <li> Welcome</li>
                             <li> To access account and manage orders</li>
-                          <a href="/login/login.html">    <li id="loginbtn">   LOGIN / SIGNUP</li> </a> 
+                            <a href="/login/login.html">
+                                <li id="loginbtn"> LOGIN / SIGNUP</li>
+                            </a>
                             <hr>
                             <li>Orders</li>
                             <li> Wishlist</li>
@@ -704,7 +721,7 @@
             </div>
             <div>
                 <i class="fa-regular fa-heart"></i>
-                <span> <a href="/products/wishlist.html" style="color:black;"> Wishlist  </a> </span>
+                <span> <a href="/products/wishlist.html" style="color:black;"> Wishlist </a> </span>
             </div>
             <div>
                 <i class="fa-solid fa-bag-shopping"></i>
@@ -1000,7 +1017,8 @@
         </div>
         <div class="footer-80" id="footerContact">
             <div>
-                <p style="color: grey">In case of any concern,<a href="" style="text-decoration: none; color:black;">  <b>  Contact Us    </b>      </a> 
+                <p style="color: grey">In case of any concern,<a href="" style="text-decoration: none; color:black;">
+                        <b> Contact Us </b> </a>
                 </p>
             </div>
             <div>
@@ -1011,16 +1029,19 @@
             <hr>
             <h3 class="footerHead">MEN’S SHOPPING AT FASHION COMPANY : A SUPERIOR EXPERIENCE
             </h3>
-            <p>Fashion Company is one of the best sites when it comes to online shopping for men. The finest of material,
+            <p>Fashion Company is one of the best sites when it comes to online shopping for men. The finest of
+                material,
                 superior
                 design and unbeatable style go into the making of our men’s shopping collection. Our range of online
                 shopping men’s wear, accessories, footwear and personal care products are second to none. Compared with
-                other men’s shopping sites, Fashion Company brings you the best price products which won’t hurt your pocket. With
+                other men’s shopping sites, Fashion Company brings you the best price products which won’t hurt your
+                pocket. With
                 seasonal discounts on trendy casual wear, suits, blazers, sneakers and more, online shopping for men at
                 Fashion Company just gets even more irresistible!</p>
             <h3 class="footerHead">ONLINE SHOPPING FOR MEN: OPTIONS UNLIMITED</h3>
             <p>
-                At Fashion Company, our online shopping fashion for men collection features plenty of options to create multiple
+                At Fashion Company, our online shopping fashion for men collection features plenty of options to create
+                multiple
                 outfits. At our men’s online shop we have brought together an exhaustive range of products from the best
                 men’s brands. Here is a list of must-haves from the wide variety of awesome products at Fashion Company:
             </p>
@@ -1087,7 +1108,7 @@
 
 <script>
     let loggedIn = JSON.parse(localStorage.getItem('loggedIn'))
-    let cartItems=loggedIn.data.cart || []
+    let cartItems = loggedIn.data.cart || []
 
     // let wishlistData = JSON.parse(localStorage.getItem('wishlistData'))||[]
     // let addToCartData=JSON.parse(localStorage.getItem('addToCartData'))||[]
@@ -1104,9 +1125,9 @@
         function displayProduct(arr) {
             products.innerHTML = ''
             if (wishlistData.length > 0) {
-            wishlistdiv.innerHTML = ''
-            wishlistdiv.style.height = '0px'
-        }
+                wishlistdiv.innerHTML = ''
+                wishlistdiv.style.height = '0px'
+            }
             arr.forEach((data, i) => {
 
                 //This is a div in which each product will be stored
@@ -1131,19 +1152,20 @@
 
                 span.classList.add('rating')
                 btn.style.display = 'block'
+                btn.classList.add('btncart')
 
                 btn.innerText = 'Move To Cart'
-                div.append(div2, span, btn, h3, desc, Rs)
+                div.append(div2, span, h3, Rs, btn)
                 products.append(div)
 
                 btn.addEventListener('click', () => {
-                    
-                   loggedIn.data.wishList.splice(i,1)
+
+                    loggedIn.data.wishList.splice(i, 1)
                     cartItems.push(data)
-                    loggedIn.data.cart=cartItems
-                    localStorage.setItem('loggedIn',JSON.stringify(loggedIn))
+                    loggedIn.data.cart = cartItems
+                    localStorage.setItem('loggedIn', JSON.stringify(loggedIn))
                     displayProduct(wishlistData)
-                    
+
                 })
 
 
@@ -1166,12 +1188,6 @@
 <a href="/login//login.html"><button>LOGIN</button>  </a> 
 </div>
 `
-
-
-
-
-
-
 
     }
 </script>
